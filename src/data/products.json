@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Seamless Pipes",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 2,
+    "title": "Pipe Fittings",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 3,
+    "title": "Forged Fittings",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 4,
+    "title": "Valves",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 5,
+    "title": "Flanges",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 6,
+    "title": "Tube Fittings & Instrumentation",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 7,
+    "title": "Studs & Bolts",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 8,
+    "title": "Gaskets",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 9,
+    "title": "Gauges Flexible Tubes",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  },
+  {
+    "id": 10,
+    "title": "Expansion Joints",
+    "blueIcon": "/images/products/blue-pipes.svg",
+    "greyIcon": "/images/products/grey-pipes.svg",
+    "redArrow": "/images/services/red-arrow.svg",
+    "blueArrow": "/images/services/blue-arrow.svg"
+  }
+]
