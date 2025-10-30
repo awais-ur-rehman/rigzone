@@ -20,8 +20,8 @@ export function AboutSection() {
             <div className="absolute bottom-28 right-4 bg-white p-6 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
               <div className="flex items-center space-x-4">
                 <div className="text-center -space-y-4">
-                  <div className="text-[36px] font-motor-oil font-bold text-[#3E4C52]">20<span className="font-sans">+</span></div>
-                  <div className="text-[16px] text-[#3E4C52]">Years</div>
+                  <div className="text-[36px] font-motor-oil font-[300] text-[#3E4C52]">20<span className="font-sans">+</span></div>
+                  <div className="text-[16px] text-[#3E4C52] text-start"><p>Years</p></div>
                 </div>
                 <div className="w-px h-12 bg-black"></div>
                 <div className="text-[16px] text-[#3E4C52] tracking-[1.2px] leading-5 max-w-[150px]">
@@ -42,14 +42,11 @@ export function AboutSection() {
               </div>
 
               {/* Main Headline */}
-              <h2 className="text-3xl lg:text-[36px] font-motor-oil font-bold text-[#3E4C52] leading-9 tracking-[1.2px] align-left text-left">
-                Delivering end to end solutions across engineering supply chain and oilfield operations
+              <h2 className="text-3xl lg:text-[32px] font-motor-oil font-[400] text-[#3E4C52] leading-9 tracking-[1.2px] align-left text-left">
+                RIGZONE Oilfields and Energy Services specializes in the supply of specialized industrial equipment and technical services for the Oilfield<span className="font-sans">,</span> Energy<span className="font-sans">,</span> and Petrochemical sectors<span className="font-sans">.</span>
               </h2>
 
-              {/* Company Description */}
-              <p className="text-[18px] font-inter text-[#435057] leading-tight">
-                Rigzone LLC is an oilfield solutions provider specializing in engineering, procurement, and certified PVF equipment supply. Since 2005, we've supported energy and industrial projects worldwide.
-              </p>
+
 
               {/* Mission and Vision Grid */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
