@@ -35,7 +35,7 @@ export function HeroSection() {
       </div>
 
 
-      <div className="absolute inset-0 bg-black/20 z-10" />
+      <div className="absolute inset-0 bg-[#0A2342]/20 z-10" />
 
       <div className="relative z-20 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-12 gap-x-6">

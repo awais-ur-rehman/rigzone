@@ -6,6 +6,7 @@ import { AboutSection } from '../../components/sections/AboutSection';
 import { ServicesSection } from '../../components/sections/ServicesSection';
 import { ProductSection } from '../../components/sections/ProductSection';
 import { ContactSection } from '../../components/sections/ContactSection';
+import { ClientsSection } from '@/components/sections/ClientsSection';
 
 export function HomePage() {
   return (
@@ -15,6 +16,7 @@ export function HomePage() {
       <HeroSection />
       <AboutSection />
       <ServicesSection />
+      <ClientsSection />
       <ProductSection />
       <ContactSection />
       <Footer />

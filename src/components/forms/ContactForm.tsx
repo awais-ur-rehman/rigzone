@@ -61,7 +61,7 @@ export function ContactForm() {
       </div>
 
       {/* Section 2: Sender Information */}
-      <div className="space-y-4">
+      <div className="space-y-4 mt-16">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
             <span className="text-white font-semibold">2</span>

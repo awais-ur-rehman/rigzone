@@ -1,0 +1,21 @@
+[
+  { "id": "client-01", "name": "Abu Dhabi National Oil Company", "logo": "/images/clients/Abu_Dhabi_National_Oil_Company_logo.svg" },
+  { "id": "client-02", "name": "Abu Dhabi Gas Liquefaction Company (ADGAS)", "logo": "/images/clients/abu-dhabi-gas-liquefaction-company-limited-adgas-seeklogo.svg" },
+  { "id": "client-03", "name": "BP", "logo": "/images/clients/BP_Helios_logo.svg" },
+  { "id": "client-04", "name": "Chevron", "logo": "/images/clients/Chevron_Logo.svg" },
+  { "id": "client-05", "name": "China National Petroleum Corporation", "logo": "/images/clients/China_National_Petroleum_Corporation_logo.svg" },
+  { "id": "client-06", "name": "DNO ASA", "logo": "/images/clients/DNO_ASA_logo.svg" },
+  { "id": "client-07", "name": "Eni", "logo": "/images/clients/Eni_logo_2025.svg" },
+  { "id": "client-08", "name": "Genel Energy", "logo": "/images/clients/Genel-energy-logo.svg" },
+  { "id": "client-09", "name": "Gulf Keystone Petroleum", "logo": "/images/clients/GulfKeystoneLogo.svg" },
+  { "id": "client-10", "name": "Halliburton", "logo": "/images/clients/Halliburton_logo.svg" },
+  { "id": "client-11", "name": "Hess Corporation", "logo": "/images/clients/Hess_Corporation_Logo.svg" },
+  { "id": "client-12", "name": "Client Logo", "logo": "/images/clients/logo.svg" },
+  { "id": "client-13", "name": "Marathon Oil", "logo": "/images/clients/Marathon_Oil_logo.svg" },
+  { "id": "client-14", "name": "National Drilling Company (NDC)", "logo": "/images/clients/NDC.svg" },
+  { "id": "client-15", "name": "OMV", "logo": "/images/clients/OMV_Logo_2024.svg" },
+  { "id": "client-16", "name": "SLB", "logo": "/images/clients/SLB_Logo_2022.svg" },
+  { "id": "client-17", "name": "TAQA", "logo": "/images/clients/TAQA_logo.svg" },
+  { "id": "client-18", "name": "Tullow Oil", "logo": "/images/clients/Tullow_Oil.svg" },
+  { "id": "client-19", "name": "Weatherford International", "logo": "/images/clients/Weatherford_International_Logo.svg" }
+]

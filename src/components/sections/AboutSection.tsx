@@ -36,15 +36,18 @@ export function AboutSection() {
             <div className="space-y-10">
               {/* About Us Badge */}
               <div className="inline-block">
-                <span className="bg-[#435057] text-[#F6F4EB] font-inter px-4 py-2 text-[16px] tracking-[1.2px]">
+                <span className="bg-[#435057] text-[#F6F4EB] font-inter px-4 py-2 text-[18px] tracking-[1.2px]">
                   About Us
                 </span>
               </div>
 
               {/* Main Headline */}
-              <h2 className="text-3xl lg:text-[32px] font-motor-oil font-[400] text-[#3E4C52] leading-9 tracking-[1.2px] align-left text-left">
-                RIGZONE Oilfields and Energy Services specializes in the supply of specialized industrial equipment and technical services for the Oilfield<span className="font-sans">,</span> Energy<span className="font-sans">,</span> and Petrochemical sectors<span className="font-sans">.</span>
-              </h2>
+              <p className="text-xl lg:text-[20px] font-inter text-[#3E4C52] leading-6 tracking-[1.2px] align-left text-left">
+                RIGZONE Oilfields & Energy Services deals in specialized industrial equipment, supplies, and services for the Oilfield industry. The company was established in 2005 in the USA and has been serving the Oil & Gas, Petrochemical Industries, and various Government Departments worldwide for more than two decades. We have offices in Maryland, USA, and Karachi, Pakistan.
+              </p>
+              <p className="text-xl lg:text-[20px] font-inter text-[#3E4C52] leading-6 tracking-[1.2px] align-left text-left">
+                We are committed to customer satisfaction; our prime objective is to provide highly dependable and reliable services within our areas of expertise to industries around the world.
+              </p>
 
 
 
@@ -52,7 +55,7 @@ export function AboutSection() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 {/* Mission */}
                 <div className="space-y-3">
-                  <h3 className="text-[20px] font-motor-oil tracking-[1.2px] text-[#435057]">Our Mission</h3>
+                  <h3 className="text-[32px] font-motor-oil tracking-[1.2px] text-[#435057]">Our Mission</h3>
                   <p className="text-[18px] font-inter text-[#435057] leading-tight">
                     To deliver reliable oilfield equipment and engineering solutions that meet international standards, ensuring quality, safety, and long-term value for every client.
                   </p>
@@ -60,7 +63,7 @@ export function AboutSection() {
 
                 {/* Vision */}
                 <div className="space-y-3">
-                  <h3 className="text-[20px] font-motor-oil tracking-[1.2px] text-[#435057]">Our Vision</h3>
+                  <h3 className="text-[32px] font-motor-oil tracking-[1.2px] text-[#435057]">Our Vision</h3>
                   <p className="text-[18px] font-inter text-[#435057] leading-tight">
                     To be the most trusted engineering and supply partner connecting global energy markets through dependable service and certified quality.
                   </p>
