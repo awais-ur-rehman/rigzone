@@ -5,7 +5,7 @@ export function Footer() {
     <footer className="bg-[#3E4C52]">
       {/* Top CTA band */}
       <div className="bg-[#E15E00] h-80">
-        <div className="mx-auto max-w-10/12 px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-12 gap-x-6 items-center">
             <div className="col-span-12 lg:col-span-3">
               <img src="/icons/social/footer.svg" alt="Rig illustration" className="w-full h-[290px] object-cover relative -bottom-7" />
@@ -37,7 +37,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-10/12 px-4 sm:px-6 lg:px-8 space-y-8 py-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 py-6">
         <div className="grid grid-cols-12 gap-x-2 py-6">
           {/* Left branding column */}
           <div className="col-span-12 lg:col-span-4 space-y-8 items-start justify-center flex flex-col">
