@@ -46,7 +46,7 @@ export function ServicesSection() {
         <div className="text-center space-y-10 w-full">
           {/* Badge */}
           <div>
-            <span className="bg-[#435057] text-[#F6F4EB] font-inter px-4 py-2 text-[16px] tracking-[1.2px]">
+            <span className="bg-[#435057] text-[#F6F4EB] font-inter px-4 py-2 text-[18px] tracking-[1.2px]">
               Our Services
             </span>
           </div>

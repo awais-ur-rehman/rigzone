@@ -45,3 +45,33 @@ body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
   letter-spacing: 1.2px;
 }
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.marquee-animate-left {
+  animation: marquee-left 30s linear infinite;
+  will-change: transform;
+}
+
+.marquee-animate-right {
+  animation: marquee-right 30s linear infinite;
+  will-change: transform;
+}
