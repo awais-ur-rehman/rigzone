@@ -36,7 +36,7 @@ export function Card({
             ></div>
 
             {/* Content */}
-            <div className="relative z-10 h-full w-full flex flex-col justify-between space-y-1 py-4">
+            <div className="relative z-10 h-full w-full flex flex-col justify-between space-y-1 py-6">
                 {/* Icon Section */}
                 {icon && (
                     <div className="relative mb-4 h-24 w-full flex">
