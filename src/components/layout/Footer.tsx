@@ -40,15 +40,15 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-12 gap-x-6 gap-y-12">
           {/* Left branding column */}
-          <div className="col-span-12 lg:col-span-4 space-y-6">
-            <div className="flex items-center space-x-3">
-              <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-12 w-auto" />
+          <div className="col-span-12 lg:col-span-4 space-y-2 items-start justify-center flex flex-col">
+            <div className="">
+              <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-24 w-auto" />
             </div>
-            <p className="text-[16px] font-inter text-[#435057] leading-6 max-w-sm">
+            <p className="text-[16px] font-inter text-[#3E4C52] tracking-[1.2px] leading-5 max-w-[300px] text-center">
               Rigzone delivers reliable oilfield equipment and engineering services, supporting energy and industrial
               projects across the USA, Middle East, and South Asia.
             </p>
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-4 justify-center w-full mt-6">
               <a href="#" aria-label="Facebook"><img className="h-6 w-6" src="/icons/social/facebook.svg" alt="facebook" /></a>
               <a href="#" aria-label="Instagram"><img className="h-6 w-6" src="/icons/social/instagram.svg" alt="instagram" /></a>
               <a href="#" aria-label="LinkedIn"><img className="h-6 w-6" src="/icons/social/linkedin.svg" alt="linkedin" /></a>
