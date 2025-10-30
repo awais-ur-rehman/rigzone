@@ -28,7 +28,7 @@ export function Footer() {
               <Button
                 text="Get Started Now"
                 icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="h-4 w-4" />}
-                variant="secondary"
+                variant="footerSecondary"
                 size="lg"
                 className="h-12 mt-14"
               />
