@@ -5,7 +5,7 @@ import { ROUTES } from '../../routes';
 
 export function DesktopNavbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white hidden md:block w-full py-2">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#435057] hidden md:block w-full py-2">
       <Container>
         <div className="grid grid-cols-12 items-center h-18 gap-x-6">
           {/* Logo */}
@@ -27,31 +27,31 @@ export function DesktopNavbar() {
             <div className="flex justify-center items-center space-x-8">
               <a
                 href={`${ROUTES.home}#about`}
-                className="text-[var(--text-base)]/90 hover:text-[var(--text-base)]  p-2 transition-colors"
+                className="text-white hover:text-[#F6F4EB]  p-2 transition-colors"
               >
                 About Us
               </a>
               <a
                 href={`${ROUTES.home}#services`}
-                className="text-[var(--text-base)]/90 hover:text-[var(--text-base)] p-2 transition-colors"
+                className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Services
               </a>
               <a
                 href={`${ROUTES.home}#clients`}
-                className="text-[var(--text-base)]/90 hover:text-[var(--text-base)] p-2 transition-colors"
+                className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Clients
               </a>
               <a
                 href={`${ROUTES.home}#products`}
-                className="text-[var(--text-base)]/90 hover:text-[var(--text-base)] p-2 transition-colors"
+                className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Products
               </a>
               <a
                 href={`${ROUTES.companyProfile}`}
-                className="text-[var(--text-base)]/90 hover:text-[var(--text-base)] p-2 transition-colors"
+                className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Company Profile
               </a>
