@@ -2,30 +2,12 @@
 
 import { useState } from 'react';
 import { Card } from '../ui/Card';
+import servicesData from '@/data/services.json';
 
 export function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
-  const services = [
-    {
-      title: "Procurement and Supply Chain",
-      description: "Global sourcing of certified PVF products, valves, and materials — delivered on time and to standard.",
-      icon: "/images/services/supply_chain.svg",
-      accentColor: "#CE8B1E",
-    },
-    {
-      title: "Engineering Services",
-      description: "Industrial components, piping systems, and assemblies for oilfield and energy projects.",
-      icon: "/images/services/engineering_service.svg",
-      accentColor: "#E15E00",
-    },
-    {
-      title: "Oilfield Services",
-      description: "Onsite expertise in well stimulation, coil tubing, and marine operations for dependable field performance.",
-      icon: "/images/services/oilfield_service.svg",
-      accentColor: "#3E4C52",
-    }
-  ];
+  const services = servicesData.slice(0, 3);
 
   const Icon = ({ src }: { src: string }) => (
     <img src={src} alt="Service Icon" className="w-full h-full p-1 object-cover text-white" />

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "slug": "procurement-and-supply-chain",
+    "title": "Procurement and Supply Chain",
+    "description": "Global sourcing of certified PVF products, valves, and materials — delivered on time and to standard.",
+    "icon": "/images/services/supply_chain.svg",
+    "accentColor": "#CE8B1E",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "We source and deliver PVF products and related materials from qualified global suppliers, ensuring compliance with API, ASTM, and ANSI standards.",
+    "features": [
+      "Global vendor network",
+      "Expedited logistics",
+      "Compliance documentation"
+    ]
+  },
+  {
+    "id": 2,
+    "slug": "engineering-services",
+    "title": "Engineering Services",
+    "description": "Industrial components, piping systems, and assemblies for oilfield and energy projects.",
+    "icon": "/images/services/engineering_service.svg",
+    "accentColor": "#E15E00",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Design, specification, and assembly support for complex industrial systems across upstream and downstream operations.",
+    "features": [
+      "System design and specification",
+      "Material selection",
+      "Assembly and testing"
+    ]
+  },
+  {
+    "id": 3,
+    "slug": "oilfield-services",
+    "title": "Oilfield Services",
+    "description": "Onsite expertise in well stimulation, coil tubing, and marine operations for dependable field performance.",
+    "icon": "/images/services/oilfield_service.svg",
+    "accentColor": "#3E4C52",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Operational support and specialized services to enhance field productivity and safety.",
+    "features": [
+      "Well stimulation",
+      "Coil tubing",
+      "Marine operations support"
+    ]
+  }
+]
