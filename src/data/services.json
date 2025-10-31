@@ -1,47 +1,122 @@
 [
   {
     "id": 1,
-    "slug": "procurement-and-supply-chain",
-    "title": "Procurement and Supply Chain",
+    "slug": "procurement",
+    "titleFull":"Procurement and Supply Chain",
+    "title": "Procurement",
     "description": "Global sourcing of certified PVF products, valves, and materials — delivered on time and to standard.",
     "icon": "/images/services/supply_chain.svg",
     "accentColor": "#CE8B1E",
     "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
     "longDescription": "We source and deliver PVF products and related materials from qualified global suppliers, ensuring compliance with API, ASTM, and ANSI standards.",
-    "features": [
-      "Global vendor network",
-      "Expedited logistics",
-      "Compliance documentation"
-    ]
+    "features": ["Global vendor network", "Expedited logistics", "Compliance documentation"]
   },
   {
     "id": 2,
-    "slug": "engineering-services",
-    "title": "Engineering Services",
+    "slug": "engineering",
+    "titleFull":"Engineering Services",
+    "title": "Engineering",
     "description": "Industrial components, piping systems, and assemblies for oilfield and energy projects.",
     "icon": "/images/services/engineering_service.svg",
     "accentColor": "#E15E00",
     "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
     "longDescription": "Design, specification, and assembly support for complex industrial systems across upstream and downstream operations.",
-    "features": [
-      "System design and specification",
-      "Material selection",
-      "Assembly and testing"
-    ]
+    "features": ["System design and specification", "Material selection", "Assembly and testing"]
   },
   {
     "id": 3,
-    "slug": "oilfield-services",
-    "title": "Oilfield Services",
+    "slug": "fabrication",
+    "titleFull":"Oilfield Services",
+    "title": "Oilfield",
     "description": "Onsite expertise in well stimulation, coil tubing, and marine operations for dependable field performance.",
+    "icon": "/images/services/engineering_service.svg",
+    "accentColor": "#435057",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Shop and field fabrication for oilfield and energy projects with documented QA/QC.",
+    "features": ["Piping spools", "Skid assemblies", "NDT and inspection"]
+  },
+  {
+    "id": 4,
+    "slug": "construction",
+    "titleFull":"Construction Services",
+    "title": "Construction",
+    "description": "Onsite construction services for mechanical, piping and utility systems.",
+    "icon": "/images/services/engineering_service.svg",
+    "accentColor": "#3E4C52",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Construction execution with HSE focus and schedule discipline.",
+    "features": ["Mechanical erection", "Piping installation", "Pre-commissioning"]
+  },
+  {
+    "id": 5,
+    "slug": "commissioning-and-startup",
+    "titleFull":"Commissioning and Startup",
+    "title": "Commissioning and Startup",
+    "description": "System checkout, commissioning and startup support for safe handover.",
+    "icon": "/images/services/engineering_service.svg",
+    "accentColor": "#E15E00",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Procedures, checklists and execution teams to transition projects into operation.",
+    "features": ["Procedure development", "Functional testing", "Operator training"]
+  },
+  {
+    "id": 6,
+    "slug": "consultancy-services",
+    "titleFull":"Consultancy Services",
+    "title": "Consultancy Services",
+    "description": "Technical consulting across procurement, engineering and operations.",
+    "icon": "/images/services/engineering_service.svg",
+    "accentColor": "#CE8B1E",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Advisory and optimization for cost, reliability and compliance.",
+    "features": ["Specification review", "Vendor qualification", "Failure analysis"]
+  },
+  {
+    "id": 7,
+    "slug": "well-stimulation",
+    "titleFull":"Well Stimulation",
+    "title": "Well Stimulation",
+    "description": "Field services to enhance well productivity and performance.",
     "icon": "/images/services/oilfield_service.svg",
     "accentColor": "#3E4C52",
     "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
-    "longDescription": "Operational support and specialized services to enhance field productivity and safety.",
-    "features": [
-      "Well stimulation",
-      "Coil tubing",
-      "Marine operations support"
-    ]
+    "longDescription": "Acidizing and stimulation programs executed to strict HSE standards.",
+    "features": ["Acidizing", "Matrix stimulation", "Pump down services"]
+  },
+  {
+    "id": 8,
+    "slug": "coil-tubing",
+    "titleFull":"Coil Tubing",
+    "title": "Coil Tubing",
+    "description": "Coil tubing operations for cleanouts, interventions and stimulation.",
+    "icon": "/images/services/oilfield_service.svg",
+    "accentColor": "#435057",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Experienced coil tubing teams and equipment to deliver safe interventions.",
+    "features": ["Cleanouts", "Logging support", "Nitrogen lift"]
+  },
+  {
+    "id": 9,
+    "slug": "completion-and-downhole-tools",
+    "titleFull":"Completion and Downhole Tools",
+    "title": "Completion and Downhole Tools",
+    "description": "Supply of certified completion and downhole equipment.",
+    "icon": "/images/services/oilfield_service.svg",
+    "accentColor": "#E15E00",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Tools and accessories meeting API/ISO standards with traceability.",
+    "features": ["Packers and plugs", "Liners and accessories", "Service tools"]
+  },
+  {
+    "id": 10,
+    "slug": "marine-services",
+    "titleFull":"Marine Services",
+    "title": "Marine Services",
+    "description": "Marine logistics and offshore support for oilfield operations.",
+    "icon": "/images/services/oilfield_service.svg",
+    "accentColor": "#3E4C52",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "longDescription": "Vessel charter, crew transfer and offshore logistics with safety focus.",
+    "features": ["Vessel charter", "Offshore logistics", "Crew transfer"]
   }
 ]

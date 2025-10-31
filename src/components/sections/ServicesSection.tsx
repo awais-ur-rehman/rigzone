@@ -52,7 +52,7 @@ export function ServicesSection() {
               <Card
                 accentColor={service.accentColor}
                 icon={<Icon src={service.icon} />}
-                title={service.title}
+                title={service.titleFull}
                 description={service.description}
                 ctaText="Read More"
                 ctaIcon={<ArrowIcon isHovered={hoveredIndex === index} />}
