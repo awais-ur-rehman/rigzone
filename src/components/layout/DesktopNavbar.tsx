@@ -10,7 +10,7 @@ export function DesktopNavbar() {
         <div className="grid grid-cols-12 items-center h-18 gap-x-6">
           {/* Logo */}
           <div className="col-span-3 lg:col-span-2 flex items-center">
-            <a href="#home" aria-label="Home" >
+            <a href={`${ROUTES.home}`} aria-label="Home" >
               <Image
                 src="/images/logo/Logo.svg"
                 alt="RigZone Logo"
@@ -32,7 +32,7 @@ export function DesktopNavbar() {
                 About Us
               </a>
               <a
-                href={`${ROUTES.home}#services`}
+                href={`${ROUTES.services}`}
                 className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Services
@@ -44,7 +44,7 @@ export function DesktopNavbar() {
                 Clients
               </a>
               <a
-                href={`${ROUTES.home}#products`}
+                href={`${ROUTES.products}`}
                 className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Products

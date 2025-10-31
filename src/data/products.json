@@ -5,7 +5,15 @@
     "blueIcon": "/images/products/pipes.svg",
     "greyIcon": "/images/products/pipes_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "High-quality seamless pipes for oil, gas, and industrial use.",
+    "sizes": "½”–36”",
+    "schedules": "All Standardized WT and other upon request",
+    "standards": "ASTM – API – ANSI – AFNOR – DIN",
+    "materialGrade": "ASTM/ A106 GR.B, A53 GR.B, API 5LGR.B, X42, X52, X60, ASTM A312, TP-304, 304L, 316, 316L, ASTM A333 GR6, ASTM A335 P5, P11.",
+    "specialItems": "Inconel/Nickel Alloy Steel/High Alloy/Duplex and other Exotic materials.",
+    "extraNotes": "ASTM A106 GR.A, AO16 GR.C, API 5L-GRADES, A312, TP 304H, 321H, 347H, 309, 310, ALLOY 20, ASTM A335, P1, P11, P22, P5, P9."
   },
   {
     "id": 2,
@@ -13,7 +21,15 @@
     "blueIcon": "/images/products/fittings.svg",
     "greyIcon": "/images/products/fittings_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Butt-weld, socket-weld, and threaded fittings in carbon, alloy, and stainless.",
+    "sizes": "¼”–48”",
+    "schedules": "SCH 10–XXS",
+    "standards": "ASME/ B16.9, B16.11, MSS-SP",
+    "materialGrade": "ASTM A234 WPB/WPC, A105, A182 F304/L, F316/L, F321, F347",
+    "specialItems": "Custom radius elbows and large-diameter special fittings.",
+    "extraNotes": "MTRs and EN10204 3.1 available upon request."
   },
   {
     "id": 3,
@@ -21,7 +37,15 @@
     "blueIcon": "/images/products/forged.svg",
     "greyIcon": "/images/products/forged_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "High-pressure SW/THD forged fittings for critical services.",
+    "sizes": "⅛”–4”",
+    "schedules": "CL 2000–9000",
+    "standards": "ASME/ B16.11, MSS-SP-79/83/95",
+    "materialGrade": "A105N, A350 LF2, A182 F304/L, F316/L",
+    "specialItems": "O-let family and non-standard configurations.",
+    "extraNotes": "NACE MR0175 options available."
   },
   {
     "id": 4,
@@ -29,7 +53,15 @@
     "blueIcon": "/images/products/valves.svg",
     "greyIcon": "/images/products/valves_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Comprehensive range of ball, gate, globe, and check valves.",
+    "sizes": "¼”–36”",
+    "schedules": "Ratings 150#–4500#",
+    "standards": "API, ASME, ISO",
+    "materialGrade": "CS, SS, Duplex, Alloy",
+    "specialItems": "Firesafe, cryogenic, and actuation-ready packages.",
+    "extraNotes": "PED and ATEX options available."
   },
   {
     "id": 5,
@@ -37,7 +69,15 @@
     "blueIcon": "/images/products/flanges.svg",
     "greyIcon": "/images/products/flanges_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "WNRF, SORF, BLRF, SWRF, and Lap Joint flanges.",
+    "sizes": "½”–48”",
+    "schedules": "RF, RTJ; 150#–2500#",
+    "standards": "ASME/ B16.5, B16.47, API 6A",
+    "materialGrade": "A105, A350 LF2, A182 F304/L, F316/L, Duplex",
+    "specialItems": "Spectacle blinds/spacers and custom facings.",
+    "extraNotes": "NDE and PMI as required."
   },
   {
     "id": 6,
@@ -45,7 +85,15 @@
     "blueIcon": "/images/products/tube_fitting.svg",
     "greyIcon": "/images/products/tube_fitting_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Compression tube fittings, valves, and instrumentation accessories.",
+    "sizes": "⅛”–2”",
+    "schedules": "Up to 6,000 psi",
+    "standards": "ASTM, ISO",
+    "materialGrade": "SS316/L, Brass, Alloy",
+    "specialItems": "Double ferrule and bite-type systems.",
+    "extraNotes": "Interchange details available upon request."
   },
   {
     "id": 7,
@@ -53,7 +101,15 @@
     "blueIcon": "/images/products/stud_bolt.svg",
     "greyIcon": "/images/products/stud_bolt_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Stud bolts, nuts, and washers for flanged joints.",
+    "sizes": "¼”–4”",
+    "schedules": "B7/B7M/L7M and more",
+    "standards": "ASTM A193/A194",
+    "materialGrade": "B7, B7M, L7, L7M, 2H, 2HM, SS",
+    "specialItems": "PTFE coated and specials by drawing.",
+    "extraNotes": "Certificates per EN10204 available."
   },
   {
     "id": 8,
@@ -61,7 +117,15 @@
     "blueIcon": "/images/products/gasket.svg",
     "greyIcon": "/images/products/gasket_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Spiral wound, ring type joints, and sheet gaskets.",
+    "sizes": "ASME/EN",
+    "schedules": "150#–2500#",
+    "standards": "API 6A,ASME B16.20",
+    "materialGrade": "Graphite, PTFE, SS304/316, Inconel",
+    "specialItems": "Kammprofile and specialty designs.",
+    "extraNotes": "Color coding per standards."
   },
   {
     "id": 9,
@@ -69,7 +133,15 @@
     "blueIcon": "/images/products/gauges.svg",
     "greyIcon": "/images/products/gauges_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Pressure and temperature gauges, flexible hoses and accessories.",
+    "sizes": "Various",
+    "schedules": "Up to 10,000 psi",
+    "standards": "EN 837, ASME",
+    "materialGrade": "SS316, Brass",
+    "specialItems": "Liquid filled and diaphragm seal assemblies.",
+    "extraNotes": "Calibration options available."
   },
   {
     "id": 10,
@@ -77,6 +149,14 @@
     "blueIcon": "/images/products/expansion_joints.svg",
     "greyIcon": "/images/products/expansion_joints_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
-    "blueArrow": "/images/services/blue-arrow.svg"
+    "blueArrow": "/images/services/blue-arrow.svg",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
+    "summary": "Metallic and rubber expansion joints for piping systems.",
+    "sizes": "DN 25–DN",
+    "schedules": "Custom movement ratings",
+    "standards": "EJMA, ASME",
+    "materialGrade": "SS, Alloy, Elastomers",
+    "specialItems": "Tie rods, liners, covers, and special constructions.",
+    "extraNotes": "Engineering support for selection and sizing."
   }
 ]
