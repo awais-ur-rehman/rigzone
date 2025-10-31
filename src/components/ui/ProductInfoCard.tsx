@@ -43,7 +43,7 @@ export function ProductInfoCard({ title, imageUrl, summary, sizes, standards, sc
             </p>
           )}
         </div>
-        <div className={`${isExpanded ? 'max-h-[1200px] opacity-100 mt-2' : 'max-h-0 opacity-0'} overflow-hidden transition-[max-height,opacity,margin] duration-500 ease-out space-y-3 text-[16px] font-inter text-[#3E4C52]`}>
+        <div className={`${isExpanded ? 'max-h-[1200px] opacity-100 mt-2 space-y-8' : 'max-h-0 opacity-0'} overflow-hidden transition-[max-height,opacity,margin] duration-500 ease-out space-y-3 text-[16px] font-inter text-[#3E4C52]`}>
           {schedules && (
             <p><span className="font-bold">Schedules:</span> {schedules}</p>
           )}
