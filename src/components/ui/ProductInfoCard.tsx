@@ -34,10 +34,10 @@ export function ProductInfoCard({ title, imageUrl, summary, sizes, standards, sc
             </p>
           )}
 
-          {sizes && firstStandard && (
+          {sizes && firstStandard && !isExpanded && (
             <div className='bg-[#3E4C52] w-[1.2px] h-6'></div>
           )}
-          {firstStandard && (
+          {firstStandard && !isExpanded && (
             <p className=" font-inter text-[#3E4C52] leading-snug">
               <span className="font-bold">Standards:</span> {firstStandard}
             </p>
