@@ -67,7 +67,7 @@ export function MobileNavbar() {
               About Us
             </a>
             <a
-              href={`${ROUTES.home}#services`}
+              href={`${ROUTES.services}`}
               className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
               onClick={() => setIsMenuOpen(false)}
             >
