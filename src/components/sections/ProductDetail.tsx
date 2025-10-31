@@ -3,12 +3,10 @@
 import { useMemo, useState } from 'react';
 import products from '@/data/products.json';
 import { ProductInfoCard } from '../ui/ProductInfoCard';
-import { ProductOverlay } from '../ui/ProductOverlay';
 
 export function ProductDetail() {
   const items = useMemo(() => products, []);
-  const [openId, setOpenId] = useState<number | null>(null);
-  const opened = items.find((p) => p.id === openId) as any | undefined;
+  const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
     <section id="product-detail" className="min-h-screen pb-10 py-36 bg-white">
@@ -25,37 +23,30 @@ export function ProductDetail() {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {items.map((p: any) => (
-              <ProductInfoCard
-                key={p.id}
-                title={p.title}
-                imageUrl={p.imageUrl}
-                summary={p.summary}
-                sizes={p.sizes}
-                standards={p.standards}
-                onReadMore={() => setOpenId(p.id)}
-              />
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[550px]">
+            {items.map((p: any) => {
+              const isExpanded = expandedId === p.id;
+              return (
+                <div key={p.id} className={`${isExpanded ? 'row-span-2' : 'row-span-1'} transition-all duration-500 ease-out will-change-transform`}>
+                  <ProductInfoCard
+                    title={p.title}
+                    imageUrl={p.imageUrl}
+                    summary={p.summary}
+                    sizes={p.sizes}
+                    standards={p.standards}
+                    schedules={p.schedules}
+                    materialGrade={p.materialGrade}
+                    specialItems={p.specialItems}
+                    extraNotes={p.extraNotes}
+                    isExpanded={isExpanded}
+                    onToggle={() => setExpandedId(isExpanded ? null : p.id)}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
-
-      {opened && (
-        <ProductOverlay
-          isOpen={!!opened}
-          onClose={() => setOpenId(null)}
-          title={opened.title}
-          imageUrl={opened.imageUrl}
-          summary={opened.summary}
-          sizes={opened.sizes}
-          schedules={opened.schedules}
-          standards={opened.standards}
-          materialGrade={opened.materialGrade}
-          specialItems={opened.specialItems}
-          extraNotes={opened.extraNotes}
-        />
-      )}
     </section>
   );
 }
