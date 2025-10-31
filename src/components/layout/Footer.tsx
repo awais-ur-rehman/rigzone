@@ -37,7 +37,7 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 py-6">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-8 py-8">
         <div className="grid grid-cols-12 gap-x-2 py-6">
           {/* Left branding column */}
           <div className="col-span-12 lg:col-span-4 space-y-8 items-start justify-center flex flex-col">
