@@ -5,6 +5,9 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
+import { executeRecaptcha } from '@/lib/recaptcha';
+import { useState } from 'react';
+import { RecaptchaBox } from '../ui/RecaptchaBox';
 
 const contactFormSchema = z.object({
   message: z.string().min(10, 'Message must be at least 10 characters'),
@@ -16,6 +19,7 @@ const contactFormSchema = z.object({
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const {
     register,
     handleSubmit,
@@ -27,6 +31,14 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
+      const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
+      if (!siteKey) {
+        console.warn('reCAPTCHA site key missing. Set NEXT_PUBLIC_RECAPTCHA_SITE_KEY');
+      } else {
+        const token = await executeRecaptcha('contact_form', siteKey);
+        setRecaptchaToken(token);
+        console.log('reCAPTCHA token:', token);
+      }
       console.log('Form data:', data);
       // Add your API call here
       // await submitContactForm(data);
@@ -95,45 +107,26 @@ export function ContactForm() {
         />
       </div>
 
-      {/* reCAPTCHA placeholder */}
-      <div>
-        <div className="flex items-center gap-2 border-2 border-gray-300 p-4">
-          <input
-            type="checkbox"
-            id="recaptcha"
-            className="w-5 h-5 cursor-pointer"
-          />
-          <label htmlFor="recaptcha" className="text-sm cursor-pointer">
-            I'm not a robot
-          </label>
-          <div className="flex items-center gap-2 ml-auto text-xs text-gray-600">
-            <span>reCAPTCHA</span>
-            <a href="#" className="hover:underline">
-              Privacy
-            </a>
-            <span>-</span>
-            <a href="#" className="hover:underline">
-              Terms
-            </a>
-          </div>
-        </div>
+      {/* Row: reCAPTCHA checkbox-style + Submit side-by-side */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <RecaptchaBox onVerified={(token) => setRecaptchaToken(token)} />
+
+        <Button
+          text="Submit"
+          icon={
+            <img
+              src="/icons/navigation/arrow.svg"
+              alt="Arrow"
+              className="w-3 h-3"
+            />
+          }
+          variant="primary"
+          size="lg"
+          className="w-full"
+          onClick={handleSubmit(onSubmit)}
+        />
       </div>
 
-      {/* Submit Button */}
-      <Button
-        text="Submit"
-        icon={
-          <img
-            src="/icons/navigation/arrow.svg"
-            alt="Arrow"
-            className="w-3 h-3"
-          />
-        }
-        variant="primary"
-        size="lg"
-        className="w-full"
-        onClick={handleSubmit(onSubmit)}
-      />
     </form>
   );
 }

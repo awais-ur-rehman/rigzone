@@ -13,7 +13,7 @@ export function ServiceDetail() {
                 Our Services
               </span>
             </div>
-            <h1 className="text-3xl lg:text-[33px] font-motor-oil text-[#3E4C52] tracking-[1.2px]">
+            <h1 className="text-3xl lg:text-[33px] font-motor-oil text-[#3E4C52] tracking-[1.2px] my-16">
               With over two decades of experience, RIGZONE offers trusted oilfield and energy services worldwide. Our expertise ensures dependable support, quality equipment and seamless project execution<span className="font-sans">.</span>
             </h1>
           </div>

@@ -9,7 +9,7 @@ type DetailCardProps = {
 
 export function DetailCard({ title, description, imageUrl, footer }: DetailCardProps) {
     return (
-        <div className="bg-[#E5E8EB] shadow-[0_4px_4px_rgba(0,0,0,0.1)] border border-[#E5E7EB] h-[420px]">
+        <div className="bg-[#E5E8EB] shadow-[0_4px_4px_rgba(0,0,0,0.1)] h-[420px]">
             <div className="h-1/2 w-full overflow-hidden bg-[#E9EDF0]">
                 <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
             </div>

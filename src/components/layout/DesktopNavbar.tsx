@@ -44,7 +44,7 @@ export function DesktopNavbar() {
                 Clients
               </a>
               <a
-                href={`${ROUTES.home}#products`}
+                href={`${ROUTES.products}`}
                 className="text-white hover:text-[#F6F4EB] p-2 transition-colors"
               >
                 Products

@@ -74,7 +74,7 @@ export function MobileNavbar() {
               Services
             </a>
             <a
-              href={`${ROUTES.home}#products`}
+              href={`${ROUTES.products}`}
               className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
               onClick={() => setIsMenuOpen(false)}
             >
