@@ -31,9 +31,9 @@ export function AboutDetail() {
                                 <Image
                                     src="/images/about/map.svg"
                                     alt="World map showing Rigzone office locations"
-                                    width={800}
-                                    height={600}
-                                    className="w-full h-auto object-cover"
+                                    width={100}
+                                    height={100}
+                                    className="object-cover"
                                     priority
                                 />
                             </div>
