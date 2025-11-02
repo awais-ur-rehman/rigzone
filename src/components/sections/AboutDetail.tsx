@@ -33,7 +33,7 @@ export function AboutDetail() {
                                     alt="World map showing Rigzone office locations"
                                     width={100}
                                     height={100}
-                                    className="object-cover"
+                                    className="object-cover h-full w-full"
                                     priority
                                 />
                             </div>

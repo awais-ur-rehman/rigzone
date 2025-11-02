@@ -14,6 +14,7 @@ export function Footer() {
                 variant="footer"
                 size="lg"
                 className="h-12"
+                href="/about"
               />
               <Button
                 text="Get Started Now"
