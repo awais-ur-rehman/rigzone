@@ -1,20 +1,40 @@
+"use client";
 import Image from 'next/image';
 import { Button } from '../ui/Button';
+import { useEffect, useState } from 'react';
 
 export function AboutSection() {
+  const images = [
+    "/images/about/about1.png",
+    "/images/about/about2.png",
+    "/images/about/about3.png",
+  ];
+
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => {
+      setCurrent((prev: number) => (prev + 1) % images.length);
+    }, 5000);
+    return () => clearInterval(id);
+  }, [images.length]);
+
   return (
     <section id="about" className="min-h-screen py-20 bg-white flex items-center">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
-        <div className="grid grid-cols-12 gap-x-6 items-stretch">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full ">
+        <div className="grid grid-cols-12 gap-x-6 items-stretch ">
           {/* Left Column - Image with Stats Overlay */}
-          <div className="relative col-span-12 lg:col-span-5 h-full flex">
-            <Image
-              src="/images/about/about.png"
-              alt="Oil drilling rig at sunset"
-              width={100}
-              height={100}
-              className="h-full w-auto object-contain"
-            />
+          <div className="relative col-span-12 lg:col-span-5 h-full ">
+            {/* Background images crossfade */}
+            <div className="absolute inset-0 flex justify-start items-start">
+              {images.map((src, index) => (
+                <img
+                  key={src}
+                  src={src}
+                  alt="About us"
+                  className={`absolute h-full w-full max-w-[70%] left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'}`}
+                />
+              ))}
+            </div>
 
             {/* Stats Overlay */}
             <div className="absolute bottom-28 right-4 bg-white p-6 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
@@ -24,8 +44,8 @@ export function AboutSection() {
                   <div className="text-[16px] text-[#3E4C52] text-start"><p>Years</p></div>
                 </div>
                 <div className="w-px h-12 bg-black"></div>
-                <div className="text-[16px] text-[#3E4C52] tracking-[1.2px] leading-5 max-w-[150px]">
-                  Of Experience in This Company
+                <div className="text-[14px] text-[#3E4C52] tracking-[1.2px] leading-5 max-w-[200px]">
+                  Of experience in providing customized solutions worldwide.
                 </div>
               </div>
             </div>
