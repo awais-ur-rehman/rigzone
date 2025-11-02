@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Button } from '../ui/Button';
+import Image from 'next/image';
 import { Container } from './Container';
 import { ROUTES } from '../../routes';
 
@@ -13,36 +13,30 @@ export function MobileNavbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white  md:hidden">
-      {/* Top Blue Bar */}
-      <div className="h-1 bg-[var(--bright-blue)]"></div>
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#435057]  md:hidden">
+
 
       <Container>
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 bg-gradient-to-br from-[var(--orange-web)] via-[var(--red-ncs)] to-[var(--orange-web)] rounded-full flex items-center justify-center">
-              <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2L2 7v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7l-10-5z" />
-              </svg>
-            </div>
-            <a href="#" className="text-lg font-bold text-[var(--oxford-blue)]">
-              rigzone
+          <div className="flex items-center">
+            <a href={`${ROUTES.home}`} aria-label="Home">
+              <Image
+                src="/images/logo/Logo.svg"
+                alt="RigZone Logo"
+                width={100}
+                height={100}
+                priority
+                className='h-8 w-auto'
+              />
             </a>
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="flex items-center space-x-4">
-            <Button
-              text="Get Quote"
-              variant="primary"
-              size="sm"
-              href={ROUTES.contact}
-            />
-
+          <div className="flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-[var(--cadet-gray)] hover:text-[var(--oxford-blue)] focus:outline-none"
+              className="text-white hover:text-[#E15E00] focus:outline-none transition-colors"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -58,45 +52,45 @@ export function MobileNavbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-[var(--oxford-blue)]">
+          <div className="px-2 pt-2 pb-3 space-y-1 bg-[#435057] border-t border-[#3E4C52] h-screen">
             <a
-              href={`${ROUTES.home}#about`}
-              className="text-[var(--oxford-blue)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
+              href={`${ROUTES.about}`}
+              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </a>
             <a
               href={`${ROUTES.services}`}
-              className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
+              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Services
             </a>
             <a
               href={`${ROUTES.products}`}
-              className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
+              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Products
             </a>
             <a
               href={`${ROUTES.home}#industries`}
-              className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
+              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Industries
             </a>
             <a
               href={`${ROUTES.home}#clients`}
-              className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
+              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Clients and Partners
             </a>
             <a
               href={ROUTES.contact}
-              className="text-[var(--cadet-gray)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
+              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
               onClick={() => setIsMenuOpen(false)}
             >
               Contact
@@ -105,8 +99,6 @@ export function MobileNavbar() {
         )}
       </Container>
 
-      {/* Bottom Dark Blue Bar */}
-      <div className="h-1 bg-[var(--oxford-blue)]"></div>
     </nav>
   );
 }

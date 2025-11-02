@@ -9,6 +9,15 @@ export function HeroSection() {
     "/images/hero/img2.png",
     "/images/hero/img3.png",
     "/images/hero/img4.png",
+    "/images/hero/img5.png",
+    "/images/hero/img6.png",
+    "/images/hero/img7.png",
+    "/images/hero/img8.png",
+    "/images/hero/img9.png",
+    "/images/hero/img10.png",
+    "/images/hero/img11.png",
+    "/images/hero/img12.png",
+    "/images/hero/img13.png",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -52,8 +61,8 @@ export function HeroSection() {
             </div>
 
             <div className="flex items-center gap-4 ">
-              <Button text="Get Started Now" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="primary" size="lg" />
-              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="secondary" size="lg" />
+              <Button text="Get Started Now" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="primary" size="lg" href="/contact" />
+              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="secondary" size="lg" href="/about" />
             </div>
           </div>
         </div>
