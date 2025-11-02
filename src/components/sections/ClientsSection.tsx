@@ -30,7 +30,7 @@ export function ClientsSection() {
   }, []);
 
   return (
-    <section id="clients" className="py-20 bg-white">
+    <section id="clients" className="py-20 bg-white min-h-screen flex items-center justify-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="space-y-10">
           <div className="inline-block">
