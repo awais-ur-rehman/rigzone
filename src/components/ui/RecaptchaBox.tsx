@@ -51,7 +51,7 @@ export function RecaptchaBox({ onVerified }: RecaptchaBoxProps) {
                     <svg className="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-7.25 7.25a1 1 0 01-1.414 0l-3.5-3.5a1 1 0 111.414-1.414l2.793 2.793 6.543-6.543a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
                 ) : null}
             </span>
-            <span className="text-[18px] font-inter text-[#0F1F08]">I'm not a robot</span>
+            <span className="text-sm font-inter text-[#0F1F08]/70">I'm not a robot</span>
             <div className="ml-auto text-right">
                 <div className='flex items-center justify-center w-full'>
                     <img src="/images/contact-us/recaptcha.svg" alt="recaptch" className='w-7 h-7' />
