@@ -22,6 +22,7 @@ export function Footer() {
                 variant="footerSecondary"
                 size="lg"
                 className="h-12"
+                href="/contact"
               />
             </div>
           </div>

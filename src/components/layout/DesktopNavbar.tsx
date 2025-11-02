@@ -56,7 +56,7 @@ export function DesktopNavbar() {
           {/* CTA Button */}
           <div className="col-span-4 md:col-span-3 lg:col-span-2 justify-self-end">
             <a
-              href={`${ROUTES.home}#contact`}
+              href={`${ROUTES.contact}`}
               className="inline-flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px] text-[16px] bg-[#E15E00] border border-[#E15E00] text-[#F6F4EB] hover:bg-[#c95600] focus:ring-[#E15E00] shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold px-3 py-2 md:px-6 md:py-3"
             >
               Contact Us
