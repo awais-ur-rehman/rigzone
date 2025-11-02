@@ -17,5 +17,10 @@
   { "id": "client-16", "name": "SLB", "logo": "/images/clients/SLB_Logo_2022.svg" },
   { "id": "client-17", "name": "TAQA", "logo": "/images/clients/TAQA_logo.svg" },
   { "id": "client-18", "name": "Tullow Oil", "logo": "/images/clients/Tullow_Oil.svg" },
-  { "id": "client-19", "name": "Weatherford International", "logo": "/images/clients/Weatherford_International_Logo.svg" }
+  { "id": "client-19", "name": "Weatherford International", "logo": "/images/clients/Weatherford_International_Logo.svg"},
+  { "id": "client-20", "name": "UEP", "logo": "/images/clients/uep.svg"},
+  { "id": "client-21", "name": "Mari_Energies", "logo": "/images/clients/Mari_Energies.svg"},
+  { "id": "client-22", "name": "Mol", "logo": "/images/clients/mol.svg"},
+  { "id": "client-23", "name": "OGDCL", "logo": "/images/clients/OGDCL.svg"},
+  { "id": "client-24", "name": "Pakistan_petrolem", "logo": "/images/clients/Pakistan_petrolem.svg"}
 ]
