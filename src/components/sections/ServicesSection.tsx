@@ -13,13 +13,26 @@ export function ServicesSection() {
     <img src={src} alt="Service Icon" className="w-full h-full p-1 object-cover text-white" />
   );
 
-  const ArrowIcon = ({ isHovered }: { isHovered: boolean }) => (
-    <img
-      src={isHovered ? "/images/services/blue-arrow.svg" : "/images/services/red-arrow.svg"}
-      alt="Arrow"
-      className="w-4 h-4"
-    />
-  );
+  const ArrowIcon = ({ isHovered, index }: { isHovered: boolean; index: number }) => {
+    // For card 3 (index 2), swap the icons
+    if (index === 2) {
+      return (
+        <img
+          src={isHovered ? "/images/services/red-arrow.svg" : "/images/services/blue-arrow.svg"}
+          alt="Arrow"
+          className="w-4 h-4"
+        />
+      );
+    }
+    // For other cards, use normal behavior
+    return (
+      <img
+        src={isHovered ? "/images/services/blue-arrow.svg" : "/images/services/red-arrow.svg"}
+        alt="Arrow"
+        className="w-4 h-4"
+      />
+    );
+  };
 
   return (
     <section id="services" className="h-screen py-20 bg-white flex items-center">
@@ -55,7 +68,7 @@ export function ServicesSection() {
                 title={service.titleFull}
                 description={service.description}
                 ctaText="Read More"
-                ctaIcon={<ArrowIcon isHovered={hoveredIndex === index} />}
+                ctaIcon={<ArrowIcon isHovered={hoveredIndex === index} index={index} />}
                 onCtaClick={() => console.log(`${service.title} clicked`)}
               />
             </div>

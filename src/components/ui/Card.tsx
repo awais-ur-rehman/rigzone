@@ -26,7 +26,7 @@ export function Card({
     return (
         <div
             style={{ ['--accent-color' as any]: accentColor }}
-            className={`relative bg-[var(--anti-flash-white)] overflow-hidden px-6 py-6 shadow-[0_4px_4px_rgba(0,0,0,0.25)] group cursor-pointer transition-all duration-700 ease-in-out h-[400px] ${className}`}
+            className={`relative bg-[var(--anti-flash-white)] overflow-hidden px-6 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] group cursor-pointer transition-all duration-700 ease-in-out h-[400px] ${className}`}
         >
             {/* Ripple Effect (stays inside card) */}
             <div
@@ -63,7 +63,7 @@ export function Card({
 
 
                 {/* Title */}
-                <div className="relative mt-8">
+                <div className="relative mt-3 min-h-14">
                     <h3
                         className="text-[20px] font-motor-oil font-regular tracking-[1.2px] text-[#435057] leading-6 max-w-[200px]
             transition-colors duration-700 delay-200 
@@ -74,7 +74,7 @@ export function Card({
                 </div>
 
                 {/* Description */}
-                <div className="relative mt-4">
+                <div className="relative mt-3">
                     <p
                         className="text-[#435057] font-inter font-regular tracking-[1.2px] text-[16px] leading-5 
             transition-colors duration-700 delay-200 
@@ -86,7 +86,7 @@ export function Card({
 
                 {/* CTA */}
                 {ctaText && (
-                    <div className="mt-8">
+                    <div className="mt-4">
                         <button
                             onClick={onCtaClick}
                             className="flex items-center space-x-2 font-regular text-[#435057] font-motor-oil  tracking-[1.2px] text-[20px] 
