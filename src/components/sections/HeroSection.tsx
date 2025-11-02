@@ -9,6 +9,15 @@ export function HeroSection() {
     "/images/hero/img2.png",
     "/images/hero/img3.png",
     "/images/hero/img4.png",
+    "/images/hero/img5.png",
+    "/images/hero/img6.png",
+    "/images/hero/img7.png",
+    "/images/hero/img8.png",
+    "/images/hero/img9.png",
+    "/images/hero/img10.png",
+    "/images/hero/img11.png",
+    "/images/hero/img12.png",
+    "/images/hero/img13.png",
   ];
 
   const [current, setCurrent] = useState(0);

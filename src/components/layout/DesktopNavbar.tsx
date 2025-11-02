@@ -72,7 +72,7 @@ export function DesktopNavbar() {
               }
               variant="primary"
               size="md"
-              href={ROUTES.contact}
+              href={`${ROUTES.home}#contact`}
             />
           </div>
         </div>
