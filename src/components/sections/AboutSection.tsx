@@ -19,7 +19,7 @@ export function AboutSection() {
   }, [images.length]);
 
   return (
-    <section id="about" className="min-h-screen py-20 bg-white flex items-center">
+    <section id="about" className="min-h-screen py-20 pb-96 md:pb-20 lg:pb-20 bg-white flex items-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full ">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-y-12 lg:gap-y-0 gap-x-6 lg:items-stretch">
           {/* Right Column - Content (shown first on mobile) */}
@@ -80,7 +80,7 @@ export function AboutSection() {
           </div>
 
           {/* Left Column - Image with Stats Overlay (shown second on mobile, first on desktop) */}
-          <div className="relative w-full lg:col-span-5 lg:order-1 h-[400px] lg:h-full">
+          <div className="relative w-full lg:col-span-5 lg:order-1 h-[300px] md:h-[350px] lg:h-full">
             {/* Background images crossfade */}
             <div className="absolute inset-0 flex justify-start items-start">
               {images.map((src, index) => (
