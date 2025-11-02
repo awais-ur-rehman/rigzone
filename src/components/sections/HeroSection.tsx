@@ -62,7 +62,7 @@ export function HeroSection() {
 
             <div className="flex items-center gap-4 ">
               <Button text="Get Started Now" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="primary" size="lg" />
-              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="secondary" size="lg" />
+              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="secondary" size="lg" href="/about" />
             </div>
           </div>
         </div>
