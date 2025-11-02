@@ -30,20 +30,20 @@ export function ClientsSection() {
   }, []);
 
   return (
-    <section id="clients" className="py-20 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="space-y-10">
+    <section id="clients" className="py-20 bg-white min-h-screen flex items-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
+        <div className="space-y-8 md:space-y-10">
           <div className="inline-block">
             <span className="bg-[#435057] text-[#F6F4EB] font-inter px-4 py-2 text-[18px] tracking-[1.2px]">
               Our Clients
             </span>
           </div>
 
-          <h2 className="text-3xl lg:text-[44px] font-motor-oil font-normal text-[#3E4C52] leading-10 tracking-[1.2px]">
+          <h2 className="text-2xl md:text-3xl lg:text-[44px] font-motor-oil font-normal text-[#3E4C52] leading-8 md:leading-10 tracking-[1.2px]">
             Trusted by leading brands across the globe.
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-6 md:space-y-8">
             <MarqueeRow items={rowGroups[0]} direction="right-to-left" />
             <MarqueeRow items={rowGroups[1]} direction="left-to-right" />
             <MarqueeRow items={rowGroups[2]} direction="right-to-left" />
@@ -63,23 +63,22 @@ function MarqueeRow({ items, direction }: { items: ClientItem[]; direction: "lef
   return (
     <div className="relative overflow-hidden">
       <div
-        className={`flex items-center gap-16 whitespace-nowrap ${animationClass}`}
+        className={`flex items-center gap-4 md:gap-8 lg:gap-16 whitespace-nowrap py-4 md:py-6 lg:py-10 ${animationClass}`}
         style={{ width: "200%" }}
       >
         {sequence.map((c, idx) => (
-          <div key={`${c.id}-${idx}`} className="flex items-center justify-center h-fit py-10 space-x-10">
-            <img
-              src={c.logo || "/images/placeholder-logo.svg"}
-              alt={c.name}
-              className="h-fit w-auto object-cover opacity-80"
-            />
-          </div>
+          <img
+            key={`${c.id}-${idx}`}
+            src={c.logo || "/images/placeholder-logo.svg"}
+            alt={c.name}
+            className="h-fit w-auto object-cover opacity-80 max-w-[80px] md:max-w-[120px] lg:max-w-none"
+          />
         ))}
       </div>
 
       {/* Edge fade overlays */}
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-white to-transparent" />
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-white to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 w-16 sm:w-24 md:w-32 bg-gradient-to-r from-white to-transparent" />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 w-16 sm:w-24 md:w-32 bg-gradient-to-l from-white to-transparent" />
     </div>
   );
 }

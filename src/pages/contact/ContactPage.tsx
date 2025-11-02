@@ -1,23 +1,20 @@
 import { DesktopNavbar } from '../../components/layout/DesktopNavbar';
 import { MobileNavbar } from '../../components/layout/MobileNavbar';
 import { Footer } from '../../components/layout/Footer';
-import { ContactSection } from '../../components/sections/ContactSection';
-import { AboutDetail } from '../../components/sections/AboutDetail';
+import { ContactDetail } from '../../components/sections/ContactDetail';
 
-export function AboutPage() {
+export function ContactPage() {
   return (
     <div className="min-h-screen bg-white">
       <DesktopNavbar />
       <MobileNavbar />
 
-      <AboutDetail />
+      <ContactDetail />
 
-      <ContactSection />
       <Footer />
     </div>
   );
 }
 
-export default AboutPage;
-
+export default ContactPage;
 
