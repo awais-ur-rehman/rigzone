@@ -3,10 +3,12 @@
 import { ProductCard } from '../ui/ProductCard';
 import { Button } from '../ui/Button';
 import productsData from '@/data/products.json';
+import { ROUTES } from '../../routes';
 
 export function ProductSection() {
     const handleProductClick = (productId: number) => {
-        console.log(`Product ${productId} clicked`);
+        // Navigate to products page
+        window.location.href = ROUTES.products;
     };
 
     return (
@@ -41,6 +43,7 @@ export function ProductSection() {
                             }
                             variant="primary"
                             size="lg"
+                            href={ROUTES.products}
                         />
                     </div>
                 </div>
