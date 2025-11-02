@@ -26,7 +26,7 @@ export function DesktopNavbar() {
           <div className="col-span-7 lg:col-span-8 text-[18px]">
             <div className="flex justify-center items-center space-x-8">
               <a
-                href={`${ROUTES.home}#about`}
+                href={`${ROUTES.about}`}
                 className="text-white hover:text-[#F6F4EB]  p-2 transition-colors"
               >
                 About Us

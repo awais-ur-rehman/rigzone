@@ -60,7 +60,7 @@ export function MobileNavbar() {
         {isMenuOpen && (
           <div className="px-2 pt-2 pb-3 space-y-1 bg-white border-t border-[var(--oxford-blue)]">
             <a
-              href={`${ROUTES.home}#about`}
+              href={`${ROUTES.about}`}
               className="text-[var(--oxford-blue)] block px-3 py-2 rounded-md text-base font-medium hover:bg-[var(--anti-flash-white)]"
               onClick={() => setIsMenuOpen(false)}
             >
