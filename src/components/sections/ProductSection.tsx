@@ -15,8 +15,8 @@ export function ProductSection() {
         <section id="products" className="py-20 bg-[var(--anti-flash-white)] min-h-screen flex items-center">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
                 {/* Header on 12-column grid */}
-                <div className="grid grid-cols-12 gap-x-6 mb-12 items-center">
-                    <div className="col-span-12 lg:col-span-8 space-y-4">
+                <div className="grid grid-cols-12 gap-x-6 mb-12 items-center space-y-10">
+                    <div className="col-span-12 lg:col-span-8 space-y-8">
                         {/* Badge */}
                         <div>
                             <span className="bg-[#435057] text-[#F6F4EB] font-inter px-4 py-2 text-[16px] tracking-[1.2px]">

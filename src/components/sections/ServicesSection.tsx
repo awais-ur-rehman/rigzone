@@ -35,8 +35,8 @@ export function ServicesSection() {
   };
 
   return (
-    <section id="services" className="h-screen py-20 bg-white flex items-center">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full space-y-20">
+    <section id="services" className="min-h-screen py-0 lg:py-20 bg-white flex items-center">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full space-y-8 md:space-y-12 lg:space-y-20">
         {/* Header */}
         <div className="text-center space-y-10 w-full">
           {/* Badge */}
