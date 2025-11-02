@@ -105,7 +105,7 @@ export function AboutSection() {
                 }
                 variant="primary"
                 size="md"
-                href="#services"
+                href="/about"
               />
             </div>
           </div>
