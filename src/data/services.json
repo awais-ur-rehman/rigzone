@@ -19,7 +19,7 @@
     "description": "Industrial components, piping systems, and assemblies for oilfield and energy projects.",
     "icon": "/images/services/engineering_service.svg",
     "accentColor": "#E15E00",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182778/service2_dc5y5s.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182778/service3_fllhne.png",
     "longDescription": "Design, specification, and assembly support for complex industrial systems across upstream and downstream operations.",
     "features": ["System design and specification", "Material selection", "Assembly and testing"]
   },
@@ -27,11 +27,11 @@
     "id": 3,
     "slug": "fabrication",
     "titleFull":"Oilfield Services",
-    "title": "Oilfield",
+    "title": "Fabrication",
     "description": "Onsite expertise in well stimulation, coil tubing, and marine operations for dependable field performance.",
     "icon": "/images/services/oilfield_service.svg",
     "accentColor": "#435057",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182778/service3_fllhne.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182779/service4_bwfe3z.png",
     "longDescription": "Shop and field fabrication for oilfield and energy projects with documented QA/QC.",
     "features": ["Piping spools", "Skid assemblies", "NDT and inspection"]
   },
@@ -55,7 +55,7 @@
     "description": "System checkout, commissioning and startup support for safe handover.",
     "icon": "/images/services/engineering_service.svg",
     "accentColor": "#E15E00",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182779/service5_zkm3yp.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182778/service6_yve9mt.png",
     "longDescription": "Procedures, checklists and execution teams to transition projects into operation.",
     "features": ["Procedure development", "Functional testing", "Operator training"]
   },
@@ -67,7 +67,7 @@
     "description": "Technical consulting across procurement, engineering and operations.",
     "icon": "/images/services/engineering_service.svg",
     "accentColor": "#CE8B1E",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182778/service6_yve9mt.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182777/service7_megh4n.png",
     "longDescription": "Advisory and optimization for cost, reliability and compliance.",
     "features": ["Specification review", "Vendor qualification", "Failure analysis"]
   },
@@ -79,7 +79,7 @@
     "description": "Field services to enhance well productivity and performance.",
     "icon": "/images/services/oilfield_service.svg",
     "accentColor": "#3E4C52",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182777/service7_megh4n.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182777/service8_qonob7.png",
     "longDescription": "Acidizing and stimulation programs executed to strict HSE standards.",
     "features": ["Acidizing", "Matrix stimulation", "Pump down services"]
   },
@@ -91,7 +91,7 @@
     "description": "Coil tubing operations for cleanouts, interventions and stimulation.",
     "icon": "/images/services/oilfield_service.svg",
     "accentColor": "#435057",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182777/service8_qonob7.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762188631/coiled-tubing-equipment_rckwrx.png",
     "longDescription": "Experienced coil tubing teams and equipment to deliver safe interventions.",
     "features": ["Cleanouts", "Logging support", "Nitrogen lift"]
   },

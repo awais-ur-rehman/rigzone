@@ -40,7 +40,7 @@ export function ClientsSection() {
           </div>
 
           <h2 className="text-2xl md:text-3xl lg:text-[44px] font-motor-oil font-normal text-[#3E4C52] leading-8 md:leading-10 tracking-[1.2px]">
-            Trusted by leading brands across the globe.
+            Trusted by leading companies across the globe.
           </h2>
 
           <div className="space-y-6 md:space-y-8">

@@ -28,38 +28,6 @@ if (!$firstName || !$lastName || !$email || !$message) {
   exit;
 }
 
-// Verify reCAPTCHA if token provided
-if ($recaptchaToken) {
-  $secret = getenv('RECAPTCHA_SECRET_KEY');
-  if (!$secret) {
-    $secretFile = './recaptcha.php';
-    if (file_exists($secretFile)) {
-      $secret = @include $secretFile;
-    }
-  }
-  
-  if ($secret) {
-    $resp = file_get_contents('https://www.google.com/recaptcha/api/siteverify', false, stream_context_create([
-      'http' => [
-        'method'  => 'POST',
-        'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-        'content' => http_build_query(['secret' => $secret, 'response' => $recaptchaToken]),
-        'timeout' => 10,
-      ],
-    ]));
-    
-    if ($resp) {
-      $recaptchaResult = json_decode($resp, true);
-      if (!$recaptchaResult['success']) {
-        http_response_code(400);
-        echo json_encode(['success' => false, 'error' => 'reCAPTCHA verification failed']);
-        exit;
-      }
-    }
-  }
-}
-
-// Use server's default mail configuration (StackCP handles this automatically)
 $fromEmail = 'nodemailer@rigzonellc.com';
 
 // Email recipients
