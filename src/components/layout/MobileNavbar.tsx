@@ -52,37 +52,39 @@ export function MobileNavbar() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="px-2 pt-2 pb-6 space-y-1 bg-[#435057] border-t border-[#3E4C52] h-screen">
-            <a
-              href={`${ROUTES.about}`}
-              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              About Us
-            </a>
-            <a
-              href={`${ROUTES.services}`}
-              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Services
-            </a>
-            <a
-              href={`${ROUTES.home}#clients`}
-              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Clients
-            </a>
-            <a
-              href={`${ROUTES.products}`}
-              className="text-white block px-3 py-2 rounded-md text-base font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
-              onClick={() => setIsMenuOpen(false)}
-            >
-              Products
-            </a>
+          <div className="px-2 pt-2 pb-6 space-y-1 bg-[#435057] border-t border-[#3E4C52] h-[calc(100vh-56px)] flex flex-col justify-between">
+            <div className='space-y-4 font-motor-oil'>
+              <a
+                href={`${ROUTES.about}`}
+                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About Us
+              </a>
+              <a
+                href={`${ROUTES.services}`}
+                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Services
+              </a>
+              <a
+                href={`${ROUTES.home}#clients`}
+                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Clients
+              </a>
+              <a
+                href={`${ROUTES.products}`}
+                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Products
+              </a>
+            </div>
 
-            <div className="mt-4 px-3">
+            <div className="px-3">
               <a
                 href={`${ROUTES.contact}`}
                 className="inline-flex w-full items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px] text-[16px] bg-[#E15E00] border border-[#E15E00] text-[#F6F4EB] hover:bg-[#c95600] focus:ring-[#E15E00] shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold px-6 py-3"
