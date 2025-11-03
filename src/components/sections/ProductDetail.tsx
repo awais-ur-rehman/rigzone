@@ -28,7 +28,7 @@ export function ProductDetail() {
               const isExpanded = expandedId === p.id;
               const isBlurred = expandedId !== null && expandedId !== p.id;
               return (
-                <div key={p.id} className={`${isExpanded ? 'row-span-2' : 'row-span-1'} ${isBlurred ? 'blur-[2px]' : ''} transition-all duration-500 ease-out will-change-transform`}>
+                <div key={p.id} className={`${isExpanded ? 'row-span-2' : 'row-span-1'} ${isBlurred ? 'blur-[0.5px]' : ''} transition-all duration-500 ease-out will-change-transform`}>
                   <ProductInfoCard
                     title={p.title}
                     imageUrl={p.imageUrl}
