@@ -21,26 +21,52 @@ export function HeroSection() {
   ];
 
   const [current, setCurrent] = useState(0);
+  const [previous, setPrevious] = useState<number | null>(null);
+  const [isFading, setIsFading] = useState(true);
+
+  // Rotate images, but only render two layers (current + previous) to avoid downloading all at once
   useEffect(() => {
     const id = setInterval(() => {
-      setCurrent((prev: number) => (prev + 1) % images.length);
+      setPrevious(current);
+      const next = (current + 1) % images.length;
+      setCurrent(next);
+      // Prepare: first frame has current = opacity-0, previous = opacity-100
+      setIsFading(false);
+      // Next frame: trigger the transition to fade
+      requestAnimationFrame(() => requestAnimationFrame(() => setIsFading(true)));
+      // Preload upcoming image
+      const preload = new window.Image();
+      preload.decoding = 'async';
+      preload.loading = 'eager';
+      preload.src = images[(next + 1) % images.length];
     }, 5000);
     return () => clearInterval(id);
-  }, [images.length]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [current]);
 
   return (
     <section id="home" className="relative min-h-screen flex items-end py-[10%] overflow-hidden">
 
-      {/* Background images crossfade */}
+      {/* Background images crossfade - render only current and previous to cut initial downloads */}
       <div className="absolute inset-0 z-0">
-        {images.map((src, index) => (
+        {previous !== null && (
           <img
-            key={src}
-            src={src}
+            key={`prev-${previous}`}
+            src={images[previous]}
             alt="Hero background"
-            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
+            loading="lazy"
+            decoding="async"
           />
-        ))}
+        )}
+        <img
+          key={`cur-${current}`}
+          src={images[current]}
+          alt="Hero background"
+          className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-100' : 'opacity-0'}`}
+          loading="eager"
+          decoding="async"
+        />
       </div>
 
 

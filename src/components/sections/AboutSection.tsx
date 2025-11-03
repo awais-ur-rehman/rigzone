@@ -11,12 +11,22 @@ export function AboutSection() {
   ];
 
   const [current, setCurrent] = useState(0);
+  const [previous, setPrevious] = useState<number | null>(null);
+  const [isFading, setIsFading] = useState(true);
   useEffect(() => {
     const id = setInterval(() => {
-      setCurrent((prev: number) => (prev + 1) % images.length);
+      setPrevious(current);
+      const next = (current + 1) % images.length;
+      setCurrent(next);
+      setIsFading(false);
+      requestAnimationFrame(() => requestAnimationFrame(() => setIsFading(true)));
+      const preload = new window.Image();
+      preload.decoding = 'async';
+      preload.loading = 'eager';
+      preload.src = images[(next + 1) % images.length];
     }, 5000);
     return () => clearInterval(id);
-  }, [images.length]);
+  }, [current]);
 
   return (
     <section id="about" className="min-h-screen py-20 pb-96 md:pb-20 lg:pb-20 bg-white flex items-center">
@@ -81,16 +91,26 @@ export function AboutSection() {
 
           {/* Left Column - Image with Stats Overlay (shown second on mobile, first on desktop) */}
           <div className="relative w-full lg:col-span-5 lg:order-1 h-[300px] md:h-[350px] lg:h-full">
-            {/* Background images crossfade */}
+            {/* Background images crossfade - render only current and previous */}
             <div className="absolute inset-0 flex justify-start items-start">
-              {images.map((src, index) => (
+              {previous !== null && (
                 <img
-                  key={src}
-                  src={src}
+                  key={`prev-${previous}`}
+                  src={images[previous]}
                   alt="About us"
-                  className={`absolute h-full w-full max-w-[70%] left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${index === current ? 'opacity-100' : 'opacity-0'}`}
+                  className={`absolute h-full w-full max-w-[70%] left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
+                  loading="lazy"
+                  decoding="async"
                 />
-              ))}
+              )}
+              <img
+                key={`cur-${current}`}
+                src={images[current]}
+                alt="About us"
+                className={`absolute h-full w-full max-w-[70%] left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-100' : 'opacity-0'}`}
+                loading="eager"
+                decoding="async"
+              />
             </div>
 
             {/* Stats Overlay */}
