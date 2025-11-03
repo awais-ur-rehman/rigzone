@@ -86,9 +86,9 @@ export function HeroSection() {
               <p className="font-inter text-[24px] text-white leading-relaxed tracking-[1.2px]">From Wellhead to Refinery.</p>
             </div>
 
-            <div className="flex items-center gap-4 ">
-              <Button text="Get Started Now" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="primary" size="lg" href="/contact" />
-              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="w-4 h-4" />} variant="secondary" size="lg" href="/about" />
+            <div className="flex items-center md:gap-4 gap-1">
+              <Button text="Get Started Now" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="lg:w-4 lg:h-4 w-3 h-3" />} variant="primary" size="lg" href="/contact" />
+              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="lg:w-4 lg:h-4 w-3 h-3" />} variant="secondary" size="lg" href="/about" />
             </div>
           </div>
         </div>
