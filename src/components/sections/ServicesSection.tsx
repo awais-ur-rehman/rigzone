@@ -3,9 +3,12 @@
 import { useState } from 'react';
 import { Card } from '../ui/Card';
 import servicesData from '@/data/services.json';
+import { useRouter } from 'next/navigation';
+import { ROUTES } from '../../routes';
 
 export function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const router = useRouter();
 
   const services = servicesData.slice(0, 3);
 
@@ -69,7 +72,7 @@ export function ServicesSection() {
                 description={service.description}
                 ctaText="Read More"
                 ctaIcon={<ArrowIcon isHovered={hoveredIndex === index} index={index} />}
-                onCtaClick={() => console.log(`${service.title} clicked`)}
+                onCtaClick={() => router.push(`${ROUTES.services}#service-detail`)}
               />
             </div>
           ))}
