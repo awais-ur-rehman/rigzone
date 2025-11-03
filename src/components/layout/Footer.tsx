@@ -29,8 +29,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 pt-8">
-        <div className="grid grid-cols-12 gap-x-2 py-6 space-y-8 lg:space-y-0">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 pt-10">
+        <div className="grid grid-cols-12 gap-x-2 py-6 space-y-8 lg:space-y-4">
           {/* Left branding column */}
           <div className="col-span-12 lg:col-span-3 space-y-12 items-start justify-center flex flex-col">
             <div className="flex justify-start">
@@ -40,11 +40,12 @@ export function Footer() {
               Rigzone delivers reliable oilfield equipment and engineering services, supporting energy and industrial
               projects across the USA, Middle East, and South Asia.
             </p>
-            <div className="flex items-center space-x-10 justify-center mt-6">
+            <div className="flex items-center space-x-6 justify-center mt-6">
               <a href="#" aria-label="Facebook"><img className="h-8 w-8" src="/icons/social/facebook.svg" alt="facebook" /></a>
               <a href="#" aria-label="Instagram"><img className="h-8 w-8" src="/icons/social/instagram.svg" alt="instagram" /></a>
               <a href="#" aria-label="LinkedIn"><img className="h-8 w-8" src="/icons/social/linkedin.svg" alt="linkedin" /></a>
               <a href="#" aria-label="Google"><img className="h-8 w-8" src="/icons/social/google.svg" alt="google" /></a>
+              <a href="https://www.stackmail.com/" target="_blank" rel="noopener noreferrer" aria-label="Google"><img className="h-9 w-9" src="/icons/social/webmail.svg" alt="google" /></a>
             </div>
           </div>
 
@@ -64,18 +65,18 @@ export function Footer() {
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-white mb-4">Our Services</h4>
             <div className="grid grid-cols-2 gap-2 text-[16px] font-inter text-white">
               <ul className="space-y-4 text-white">
-                <li>Procurement</li>
-                <li>Engineering</li>
-                <li>Fabrication</li>
-                <li>Construction</li>
-                <li>Commissioning & Startup</li>
-                <li>Consultancy Services</li>
+                <li><a href="/services#service-detail">Procurement</a></li>
+                <li><a href="/services#service-detail">Engineering</a></li>
+                <li><a href="/services#service-detail">Fabrication</a></li>
+                <li><a href="/services#service-detail">Construction</a></li>
+                <li><a href="/services#service-detail">Commissioning & Startup</a></li>
+                <li><a href="/services#service-detail">Consultancy Services</a></li>
               </ul>
               <ul className="space-y-4 text-white">
-                <li>Well Stimulation</li>
-                <li>Coil Tubing</li>
-                <li>Marine Services</li>
-                <li>Completion & Downhole Tools</li>
+                <li><a href="/services#service-detail">Well Stimulation</a></li>
+                <li><a href="/services#service-detail">Coil Tubing</a></li>
+                <li><a href="/services#service-detail">Marine Services</a></li>
+                <li><a href="/services#service-detail">Completion & Downhole Tools</a></li>
               </ul>
             </div>
           </div>

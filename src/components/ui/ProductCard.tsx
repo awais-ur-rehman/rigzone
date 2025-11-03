@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 interface ProductCardProps {
@@ -21,6 +21,20 @@ export function ProductCard({
     onCardClick,
 }: ProductCardProps) {
     const [isHovered, setIsHovered] = useState(false);
+
+    // Preload hover-state assets to eliminate first-hover delay
+    useEffect(() => {
+        if (typeof window === 'undefined') return;
+        const preloadGrey = new window.Image();
+        preloadGrey.decoding = 'async';
+        preloadGrey.loading = 'eager';
+        preloadGrey.src = greyIcon;
+
+        const preloadBlueArrow = new window.Image();
+        preloadBlueArrow.decoding = 'async';
+        preloadBlueArrow.loading = 'eager';
+        preloadBlueArrow.src = blueArrow;
+    }, [greyIcon, blueArrow]);
 
     return (
         <div
