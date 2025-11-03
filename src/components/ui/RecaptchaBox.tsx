@@ -16,7 +16,8 @@ export function RecaptchaBox({ onVerified }: RecaptchaBoxProps) {
         try {
             const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
             const token = await executeRecaptcha('contact_checkbox', siteKey);
-            const res = await fetch('/api/recaptcha', {
+            const verifyPath = process.env.NEXT_PUBLIC_RECAPTCHA_VERIFY_PATH || '/api/recaptcha';
+            const res = await fetch(verifyPath, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ token }),
