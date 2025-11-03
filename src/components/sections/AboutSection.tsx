@@ -87,15 +87,15 @@ export function AboutSection() {
           </div>
 
           {/* Left Column - Image with Stats Overlay */}
-          <div className="relative w-full lg:col-span-5 lg:order-1 lg:h-full h-[300px] md:h-[350px] lg:h-auto">
-            {/* Background images crossfade - render only current and previous */}
-            <div className="absolute inset-0 flex justify-start items-start">
+          <div className="w-full lg:col-span-5 lg:order-1 flex flex-col lg:relative lg:h-full">
+            {/* Image Section - Mobile: full width, Desktop: absolute positioned */}
+            <div className="relative w-full h-[300px] md:h-[350px] lg:h-full lg:absolute lg:inset-0 lg:flex lg:justify-start lg:items-start">
               {previous !== null && (
                 <img
                   key={`prev-${previous}`}
                   src={images[previous]}
                   alt="About us"
-                  className={`absolute h-full w-full max-w-[70%] left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
+                  className={`absolute h-full w-full lg:max-w-[70%] lg:left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-0' : 'opacity-100'}`}
                   loading="lazy"
                   decoding="async"
                 />
@@ -104,14 +104,14 @@ export function AboutSection() {
                 key={`cur-${current}`}
                 src={images[current]}
                 alt="About us"
-                className={`absolute h-full w-full max-w-[70%] left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-100' : 'opacity-0'}`}
+                className={`absolute h-full w-full lg:max-w-[70%] lg:left-0 object-cover transition-opacity duration-[1200ms] ease-in-out ${isFading ? 'opacity-100' : 'opacity-0'}`}
                 loading="eager"
                 decoding="async"
               />
             </div>
 
-            {/* Stats Overlay */}
-            <div className="absolute bottom-8 lg:bottom-28 right-4 bg-white p-4 lg:p-6 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
+            {/* Stats Overlay - Mobile: below image, Desktop: absolute positioned */}
+            <div className="relative lg:absolute lg:bottom-28 lg:right-4 bg-white p-4 lg:p-6 shadow-[0_4px_4px_rgba(0,0,0,0.25)]">
               <div className="flex items-center space-x-4">
                 <div className="text-center -space-y-4">
                   <div className="text-[36px] font-motor-oil font-[300] text-[#3E4C52]">20<span className="font-sans">+</span></div>
