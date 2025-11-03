@@ -31,22 +31,44 @@ export function ContactForm() {
 
   const onSubmit = async (data: ContactFormData) => {
     try {
+      // Get reCAPTCHA token if available
       const siteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY as string;
-      if (!siteKey) {
-        console.warn('reCAPTCHA site key missing. Set NEXT_PUBLIC_RECAPTCHA_SITE_KEY');
-      } else {
-        const token = await executeRecaptcha('contact_form', siteKey);
-        setRecaptchaToken(token);
-        console.log('reCAPTCHA token:', token);
+      let token = recaptchaToken;
+
+      if (!token && siteKey) {
+        try {
+          token = await executeRecaptcha('contact_form', siteKey);
+          setRecaptchaToken(token);
+        } catch (recaptchaError) {
+          console.warn('reCAPTCHA error:', recaptchaError);
+        }
       }
-      console.log('Form data:', data);
-      // Add your API call here
-      // await submitContactForm(data);
+
+      // Call the PHP endpoint to send email
+      const response = await fetch('/contact-send.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...data,
+          recaptchaToken: token,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.error || 'Failed to send message');
+      }
+
+      // Success
       reset();
+      setRecaptchaToken(null);
       alert('Message sent successfully!');
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert('Failed to send message. Please try again.');
+      alert(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
     }
   };
 

@@ -82,7 +82,7 @@ export function HeroSection() {
             </div>
 
             <div className="space-y-2 mb-10">
-              <h1 className="font-motor-oil text-[60px] leading-tight font-normal text-white tracking-[0] max-w-none whitespace-normal lg:whitespace-nowrap">Oilfields<span className="font-sans font-bold">,</span> and Energy Services</h1>
+              <h1 className="font-motor-oil text-[60px] leading-tight font-normal text-white tracking-[0] max-w-none whitespace-normal lg:whitespace-nowrap">Oilfields<span className="font-sans font-bold">,</span> Energy Services</h1>
               <p className="font-inter text-[24px] text-white leading-relaxed tracking-[1.2px]">From Wellhead to Refinery.</p>
             </div>
 
