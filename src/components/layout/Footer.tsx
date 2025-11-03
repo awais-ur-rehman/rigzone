@@ -32,7 +32,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 pt-8">
         <div className="grid grid-cols-12 gap-x-2 py-6 space-y-8 lg:space-y-0">
           {/* Left branding column */}
-          <div className="col-span-12 lg:col-span-3 space-y-10 items-start justify-center flex flex-col">
+          <div className="col-span-12 lg:col-span-3 space-y-12 items-start justify-center flex flex-col">
             <div className="flex justify-start">
               <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-20 w-auto object-cover" />
             </div>
@@ -49,7 +49,7 @@ export function Footer() {
           </div>
 
           {/* Top Links */}
-          <div className="col-span-12 lg:col-span-2 mt-0 lg:mt-6 space-y-4">
+          <div className="col-span-12 lg:col-span-2 mt-0 lg:mt-6 space-y-6">
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-white mb-4">Top Links</h4>
             <ul className="space-y-3 text-white text-[16px] space-y-4 font-inter">
               <li><a href="#about">About Us</a></li>
@@ -60,7 +60,7 @@ export function Footer() {
           </div>
 
           {/* Our Services Column 1 */}
-          <div className="col-span-12 lg:col-span-4 mt-0 lg:mt-6 space-y-4">
+          <div className="col-span-12 lg:col-span-4 mt-0 lg:mt-6 space-y-6">
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-white mb-4">Our Services</h4>
             <div className="grid grid-cols-2 gap-2 text-[16px] font-inter text-white">
               <ul className="space-y-4 text-white">
@@ -81,7 +81,7 @@ export function Footer() {
           </div>
 
           {/* Newsletter */}
-          <div className="col-span-12 lg:col-span-3 mt-0 lg:mt-6 space-y-4 ps-0 lg:ps-8">
+          <div className="col-span-12 lg:col-span-3 mt-0 lg:mt-6 space-y-6 ps-0 lg:ps-8">
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-start lg:text-end text-white mb-3 lg:text-right max-w-xs lg:ml-auto">Subscribe
               <span className="block">to our Newsletter</span>
             </h4>
