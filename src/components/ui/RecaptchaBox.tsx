@@ -45,7 +45,7 @@ export function RecaptchaBox({ onVerified }: RecaptchaBoxProps) {
             className="flex items-center border border-gray-300 px-4 py-2 bg-white min-w-[360px] shadow [&:not(:disabled)]:hover:shadow-md transition-shadow"
         >
             <span
-                className={`w-6 h-6 border mr-4 ${status === 'passed' ? 'bg-[#22c55e] border-[#22c55e]' : 'border-gray-400'} flex items-center justify-center`}
+                className={`w-6 h-6 border mr-4 ${status === 'passed' ? 'bg-[#E15E00] border-[#E15E00]' : 'border-gray-400'} flex items-center justify-center`}
             >
                 {status === 'passed' ? (
                     <svg className="w-5 h-5 text-white" viewBox="0 0 20 20" fill="currentColor"><path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-7.25 7.25a1 1 0 01-1.414 0l-3.5-3.5a1 1 0 111.414-1.414l2.793 2.793 6.543-6.543a1 1 0 011.414 0z" clipRule="evenodd" /></svg>
