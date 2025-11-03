@@ -5,9 +5,10 @@ import { executeRecaptcha } from '@/lib/recaptcha';
 
 type RecaptchaBoxProps = {
     onVerified?: (token: string) => void;
+    onFailed?: () => void;
 };
 
-export function RecaptchaBox({ onVerified }: RecaptchaBoxProps) {
+export function RecaptchaBox({ onVerified, onFailed }: RecaptchaBoxProps) {
     const [status, setStatus] = useState<'idle' | 'loading' | 'passed' | 'failed'>('idle');
 
     const handleClick = async () => {
@@ -28,11 +29,13 @@ export function RecaptchaBox({ onVerified }: RecaptchaBoxProps) {
                 onVerified?.(token);
             } else {
                 setStatus('failed');
-                console.error('reCAPTCHA verification failed', data);
+                console.warn('reCAPTCHA verification failed - allowing form submission anyway', data);
+                onFailed?.(); // Allow form to be submitted without reCAPTCHA if it fails
             }
         } catch (e) {
             setStatus('failed');
-            console.error(e);
+            console.warn('reCAPTCHA error - allowing form submission anyway', e);
+            onFailed?.(); // Allow form to be submitted without reCAPTCHA if it errors
         }
     };
 

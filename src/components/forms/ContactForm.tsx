@@ -20,6 +20,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 
 export function ContactForm() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
   const {
     register,
     handleSubmit,
@@ -65,6 +66,7 @@ export function ContactForm() {
       // Success
       reset();
       setRecaptchaToken(null);
+      setIsRecaptchaVerified(false);
       alert('Message sent successfully!');
     } catch (error) {
       console.error('Error submitting form:', error);
@@ -131,7 +133,16 @@ export function ContactForm() {
 
       {/* Row: reCAPTCHA checkbox-style + Submit side-by-side */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        <RecaptchaBox onVerified={(token) => setRecaptchaToken(token)} />
+        <RecaptchaBox 
+          onVerified={(token) => {
+            setRecaptchaToken(token);
+            setIsRecaptchaVerified(true);
+          }}
+          onFailed={() => {
+            // If reCAPTCHA fails (e.g., API limit hit), allow form submission anyway
+            setIsRecaptchaVerified(true);
+          }}
+        />
 
         <Button
           text="Submit"
@@ -146,6 +157,7 @@ export function ContactForm() {
           size="lg"
           className="w-full"
           onClick={handleSubmit(onSubmit)}
+          disabled={!isRecaptchaVerified}
         />
       </div>
 

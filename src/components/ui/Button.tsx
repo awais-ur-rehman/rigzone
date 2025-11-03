@@ -8,6 +8,7 @@ interface ButtonProps {
   className?: string;
   onClick?: () => void;
   href?: string;
+  disabled?: boolean;
 }
 
 export function Button({
@@ -17,7 +18,8 @@ export function Button({
   size = 'md',
   className = '',
   onClick,
-  href
+  href,
+  disabled = false
 }: ButtonProps) {
   const baseClasses = 'inline-flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px]';
 
@@ -35,7 +37,7 @@ export function Button({
     lg: 'px-8 py-4'
   };
 
-  const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className}`;
+  const buttonClasses = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${className} ${disabled ? 'opacity-50 cursor-not-allowed' : ''}`;
 
   const content = (
     <>
@@ -53,7 +55,7 @@ export function Button({
   }
 
   return (
-    <button onClick={onClick} className={buttonClasses}>
+    <button onClick={onClick} className={buttonClasses} disabled={disabled}>
       {content}
     </button>
   );
