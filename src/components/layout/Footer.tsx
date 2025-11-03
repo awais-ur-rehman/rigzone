@@ -5,14 +5,14 @@ export function Footer() {
     <footer className="bg-[#3E4C52]">
       {/* Top CTA band */}
       <div className="bg-[#E15E00] h-44 md:h-96">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 h-full">
           <div className="flex items-center justify-end h-full">
-            <div className="flex gap-6">
+            <div className="flex gap-4 md:gap-6">
               <Button
                 text="Discover More"
                 icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="md:h-4 md:w-4 h-3 w-3" />}
                 variant="footer"
-                size="lg"
+                size="md"
                 className="h-12"
                 href="/about"
               />
@@ -20,7 +20,7 @@ export function Footer() {
                 text="Get Started Now"
                 icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="md:h-4 md:w-4 h-3 w-3" />}
                 variant="footerSecondary"
-                size="lg"
+                size="md"
                 className="h-12"
                 href="/contact"
               />
@@ -32,11 +32,11 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 pt-10">
         <div className="grid grid-cols-12 gap-x-2 py-6 space-y-8 lg:space-y-4">
           {/* Left branding column */}
-          <div className="col-span-12 lg:col-span-3 space-y-12 items-start justify-center flex flex-col">
+          <div className="col-span-12 lg:col-span-3 space-y-8 items-start justify-center flex flex-col">
             <div className="flex justify-start">
               <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-20 w-auto object-cover" />
             </div>
-            <p className="text-[16px] font-inter text-white tracking-[1.2px] leading-5 max-w-[300px] text-start">
+            <p className="text-[16px] font-inter text-white tracking-[1.2px] leading-6 max-w-[300px] text-start">
               Rigzone delivers reliable oilfield equipment and engineering services, supporting energy and industrial
               projects across the USA, Middle East, and South Asia.
             </p>
