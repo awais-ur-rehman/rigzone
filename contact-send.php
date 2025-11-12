@@ -34,7 +34,8 @@ $fromEmail = 'nodemailer@rigzonellc.com';
 $recipients = [
   'info@rigzonellc.com',
   'khan@rigzonellc.com',
-  'waseem@rigzonellc.com'
+  'waseem@rigzonellc.com',
+  'testaccount@rigzonellc.com'
 ];
 
 // Email subject

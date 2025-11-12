@@ -44,8 +44,9 @@ export function Footer() {
               <a href="#" aria-label="Facebook"><img className="h-8 w-8" src="/icons/social/facebook.svg" alt="facebook" /></a>
               <a href="#" aria-label="Instagram"><img className="h-8 w-8" src="/icons/social/instagram.svg" alt="instagram" /></a>
               <a href="#" aria-label="LinkedIn"><img className="h-8 w-8" src="/icons/social/linkedin.svg" alt="linkedin" /></a>
-              <a href="#" aria-label="Google"><img className="h-8 w-8" src="/icons/social/google.svg" alt="google" /></a>
               <a href="https://www.stackmail.com/" target="_blank" rel="noopener noreferrer" aria-label="Google"><img className="h-9 w-9" src="/icons/social/webmail.svg" alt="google" /></a>
+              <a href="#" aria-label="Google"><img className="h-8 w-8" src="/icons/social/google.svg" alt="google" /></a>
+
             </div>
           </div>
 

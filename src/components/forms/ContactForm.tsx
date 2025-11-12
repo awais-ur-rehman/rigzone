@@ -6,7 +6,7 @@ import { z } from 'zod';
 import { Input } from '../ui/Input';
 import { Button } from '../ui/Button';
 import { executeRecaptcha } from '@/lib/recaptcha';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { RecaptchaBox } from '../ui/RecaptchaBox';
 
 const contactFormSchema = z.object({
@@ -21,6 +21,7 @@ type ContactFormData = z.infer<typeof contactFormSchema>;
 export function ContactForm() {
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
+  const [toast, setToast] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const {
     register,
     handleSubmit,
@@ -63,104 +64,140 @@ export function ContactForm() {
         throw new Error(result.error || 'Failed to send message');
       }
 
-      // Success
       reset();
       setRecaptchaToken(null);
       setIsRecaptchaVerified(false);
-      alert('Message sent successfully!');
+      setToast({ type: 'success', message: 'Message received! Our team will reach out shortly.' });
     } catch (error) {
       console.error('Error submitting form:', error);
-      alert(error instanceof Error ? error.message : 'Failed to send message. Please try again.');
+      const message =
+        error instanceof Error ? error.message : 'Failed to send message. Please try again.';
+      setToast({ type: 'error', message });
     }
   };
 
+  useEffect(() => {
+    if (!toast) {
+      return;
+    }
+
+    const timeout = setTimeout(() => {
+      setToast(null);
+    }, 5000);
+
+    return () => clearTimeout(timeout);
+  }, [toast]);
+
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
-      {/* Section 1: Message */}
-      <div className="space-y-4">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
-            <span className="text-white font-semibold">1</span>
+    <>
+      <div
+        aria-live="polite"
+        aria-atomic="true"
+        className="pointer-events-none fixed inset-x-0 top-6 z-50 flex justify-center px-4 sm:justify-end"
+      >
+        {toast && (
+          <div
+            className={`pointer-events-auto flex max-w-sm items-start gap-3 rounded-xl border border-[var(--oxford-blue)]/10 bg-white px-5 py-4 shadow-[0_14px_40px_rgba(15,25,55,0.15)] transition-all duration-300 ${toast.type === 'success' ? 'text-[var(--oxford-blue)]' : 'text-red-600'
+              }`}
+          >
+            <div className="flex-1 text-sm font-medium leading-relaxed">{toast.message}</div>
+            <button
+              type="button"
+              onClick={() => setToast(null)}
+              className="ml-2 shrink-0 text-xs font-semibold uppercase tracking-wide text-[var(--oxford-blue)]"
+            >
+              Close
+            </button>
           </div>
-          <h3 className="text-xl font-bold text-[var(--oxford-blue)]">
-            Message
-          </h3>
-        </div>
-
-        <Input
-          label="Your Message"
-          textarea
-          placeholder="Type Your Message"
-          {...register('message')}
-          error={errors.message?.message}
-        />
+        )}
       </div>
-
-      {/* Section 2: Sender Information */}
-      <div className="space-y-4 mt-16">
-        <div className="flex items-center gap-3">
-          <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
-            <span className="text-white font-semibold">2</span>
+      <form onSubmit={handleSubmit(onSubmit)} className="space-y-8">
+        {/* Section 1: Message */}
+        <div className="space-y-4">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
+              <span className="text-white font-semibold">1</span>
+            </div>
+            <h3 className="text-xl font-bold text-[var(--oxford-blue)]">
+              Message
+            </h3>
           </div>
-          <h3 className="text-xl font-bold text-[var(--oxford-blue)]">
-            Sender Information
-          </h3>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <Input
-            label="First Name*"
-            placeholder="Type Your First Name"
-            {...register('firstName')}
-            error={errors.firstName?.message}
-          />
-          <Input
-            label="Last Name*"
-            placeholder="Type Your Last Name"
-            {...register('lastName')}
-            error={errors.lastName?.message}
+            label="Your Message"
+            textarea
+            placeholder="Type Your Message"
+            {...register('message')}
+            error={errors.message?.message}
           />
         </div>
 
-        <Input
-          label="Email*"
-          type="email"
-          placeholder="Enter your email address"
-          {...register('email')}
-          error={errors.email?.message}
-        />
-      </div>
+        {/* Section 2: Sender Information */}
+        <div className="space-y-4 mt-16">
+          <div className="flex items-center gap-3">
+            <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
+              <span className="text-white font-semibold">2</span>
+            </div>
+            <h3 className="text-xl font-bold text-[var(--oxford-blue)]">
+              Sender Information
+            </h3>
+          </div>
 
-      {/* Row: reCAPTCHA checkbox-style + Submit side-by-side */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
-        <RecaptchaBox 
-          onVerified={(token) => {
-            setRecaptchaToken(token);
-            setIsRecaptchaVerified(true);
-          }}
-          onFailed={() => {
-            // If reCAPTCHA fails (e.g., API limit hit), allow form submission anyway
-            setIsRecaptchaVerified(true);
-          }}
-        />
-
-        <Button
-          text="Submit"
-          icon={
-            <img
-              src="/icons/navigation/arrow.svg"
-              alt="Arrow"
-              className="w-3 h-3"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <Input
+              label="First Name*"
+              placeholder="Type Your First Name"
+              {...register('firstName')}
+              error={errors.firstName?.message}
             />
-          }
-          variant="primary"
-          size="lg"
-          className="w-full"
-          onClick={handleSubmit(onSubmit)}
-          disabled={!isRecaptchaVerified}
-        />
-      </div>
+            <Input
+              label="Last Name*"
+              placeholder="Type Your Last Name"
+              {...register('lastName')}
+              error={errors.lastName?.message}
+            />
+          </div>
 
-    </form>
+          <Input
+            label="Email*"
+            type="email"
+            placeholder="Enter your email address"
+            {...register('email')}
+            error={errors.email?.message}
+          />
+        </div>
+
+        {/* Row: reCAPTCHA checkbox-style + Submit side-by-side */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+          <RecaptchaBox
+            onVerified={(token) => {
+              setRecaptchaToken(token);
+              setIsRecaptchaVerified(true);
+            }}
+            onFailed={() => {
+              // If reCAPTCHA fails (e.g., API limit hit), allow form submission anyway
+              setIsRecaptchaVerified(true);
+            }}
+          />
+
+          <Button
+            text="Submit"
+            icon={
+              <img
+                src="/icons/navigation/arrow.svg"
+                alt="Arrow"
+                className="w-3 h-3"
+              />
+            }
+            variant="primary"
+            size="lg"
+            className="w-full"
+            onClick={handleSubmit(onSubmit)}
+            disabled={!isRecaptchaVerified}
+          />
+        </div>
+
+      </form>
+    </>
   );
 }

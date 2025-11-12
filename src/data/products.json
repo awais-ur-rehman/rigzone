@@ -70,7 +70,7 @@
     "greyIcon": "/images/products/flanges_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",
     "blueArrow": "/images/services/blue-arrow.svg",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182453/product5_x5sipr.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762188900/flanges_lwesji.png",
     "summary": "Welding Neck, Slip On, Lap Joint, Blind, Threaded, Socket Welding, Long Welding Neck, Orifice, Spectacle Blind.",
     "sizes": "1/2” to 36”",
     "schedules": "Ratings 150 – 300 – 600 – 900 – 1500 – 2500 # / API 5000 – 10000 – 15000",
@@ -97,7 +97,7 @@
   },
   {
     "id": 7,
-    "title": "Studs & Bolts",
+    "title": "Studs and Bolts",
     "blueIcon": "/images/products/stud_bolt.svg",
     "greyIcon": "/images/products/stud_bolt_hover.svg",
     "redArrow": "/images/services/red-arrow.svg",

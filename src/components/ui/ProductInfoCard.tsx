@@ -15,35 +15,22 @@ type ProductInfoCardProps = {
 };
 
 export function ProductInfoCard({ title, imageUrl, summary, sizes, standards, schedules, materialGrade, specialItems, extraNotes, isExpanded, onToggle }: ProductInfoCardProps) {
-  const firstStandard = (standards || '').split(/[–,|/]/)[0]?.trim();
   return (
     <div className="bg-[#E5E8EB] shadow-[0_4px_4px_rgba(0,0,0,0.1)] h-full flex flex-col overflow-hidden transition-all duration-500 ease-out">
       <div className={`min-h-[200px] max-h-[200px] w-full overflow-hidden bg-[#E9EDF0]`}>
         <img src={imageUrl} alt={title} className="w-full h-full object-cover" />
       </div>
       <div className="p-6 flex-1 flex flex-col gap-4">
-        {/* Title min height to align rows even when it wraps */}
         <h3 className="text-[24px] font-motor-oil font-regular text-[#3E4C52] leading-tight min-h-[60px] mt-4">{title}</h3>
-        {/* Summary min height to keep next row aligned */}
-        <p className="text-[18px] font-inter text-[#3E4C52] leading-snug min-h-[60px]">{summary}</p>
-        {/* Sizes | Standards row with fixed min height */}
-        <div className='flex w-full text-[18px] space-x-4 justify-start items-start min-h-[32px]'>
+        <p className={`text-[18px] font-inter text-[#3E4C52] leading-snug ${!isExpanded ? 'line-clamp-4' : ''}`}>{summary}</p>
+        <div className="min-h-[60px]">
           {sizes && (
-            <p className=" font-inter text-[#3E4C52] leading-snug">
+            <p className={`text-[18px] font-inter text-[#3E4C52] leading-snug ${!isExpanded ? 'line-clamp-2' : ''}`}>
               <span className="font-bold">Sizes:</span> {sizes}
             </p>
           )}
-
-          {sizes && firstStandard && !isExpanded && (
-            <div className='bg-[#3E4C52] w-[1.2px] h-6'></div>
-          )}
-          {firstStandard && !isExpanded && (
-            <p className=" font-inter text-[#3E4C52] leading-snug">
-              <span className="font-bold">Standards:</span> {firstStandard}
-            </p>
-          )}
         </div>
-        <div className={`${isExpanded ? 'max-h-[1200px] opacity-100 mt-2 space-y-8' : 'max-h-0 opacity-0'} overflow-hidden transition-[max-height,opacity,margin] duration-500 ease-out space-y-3 text-[16px] font-inter text-[#3E4C52]`}>
+        <div className={`${isExpanded ? 'max-h-[1200px] opacity-100 space-y-4' : 'max-h-0 opacity-0 mt-0'} overflow-hidden transition-[max-height,opacity,margin] duration-500 ease-out space-y-3 text-[16px] font-inter text-[#3E4C52]`}>
           {schedules && (
             <p><span className="font-bold">Schedules:</span> {schedules}</p>
           )}
@@ -61,7 +48,7 @@ export function ProductInfoCard({ title, imageUrl, summary, sizes, standards, sc
           )}
         </div>
         {/* Push Read More to the bottom to align across cards */}
-        <div className="pt-2 mt-auto">
+        <div className="mt-auto">
           <button
             type="button"
             onClick={onToggle}

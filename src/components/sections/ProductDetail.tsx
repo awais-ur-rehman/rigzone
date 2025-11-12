@@ -23,7 +23,7 @@ export function ProductDetail() {
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[550px]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[600px]">
             {items.map((p: any) => {
               const isExpanded = expandedId === p.id;
               const isBlurred = expandedId !== null && expandedId !== p.id;
