@@ -1,12 +1,22 @@
 import { Button } from "../ui/Button";
 
+
 export function Footer() {
   return (
     <footer className="bg-[#3E4C52]">
       {/* Top CTA band */}
       <div className="bg-[#E15E00] h-44 md:h-96">
         <div className="mx-auto max-w-7xl px-6 lg:px-8 h-full">
-          <div className="flex items-center justify-end h-full">
+          <div className="flex items-center justify-between h-full">
+            {/* Left: Illustration */}
+            <div className="hidden md:block flex-1 h-full">
+              <img
+                src="/icons/social/footer.svg"
+                alt="Rigzone equipment illustration"
+                className="h-full w-auto object-contain object-left"
+              />
+            </div>
+            {/* Right: CTA Buttons */}
             <div className="flex gap-4 md:gap-6">
               <Button
                 text="Discover More"
