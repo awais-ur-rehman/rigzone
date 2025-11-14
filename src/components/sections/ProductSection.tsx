@@ -6,13 +6,14 @@ import productsData from '@/data/products.json';
 import { ROUTES } from '../../routes';
 
 export function ProductSection() {
+    const featuredProducts = productsData.slice(0, 10);
     const handleProductClick = (productId: number) => {
         // Navigate to products page
         window.location.href = ROUTES.products;
     };
 
     return (
-        <section id="products" className="py-20 bg-[var(--anti-flash-white)] min-h-screen flex items-center">
+        <section id="products" className="scroll-snap-section py-20 bg-[var(--anti-flash-white)] min-h-screen flex items-center">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
                 {/* Header on 12-column grid */}
                 <div className="grid grid-cols-12 gap-x-6 mb-12 items-center space-y-10">
@@ -50,7 +51,7 @@ export function ProductSection() {
 
                 {/* Product Grid: 1/2/4/5 across breakpoints */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-                    {productsData.map((product) => (
+                    {featuredProducts.map((product) => (
                         <div key={product.id}>
                             <ProductCard
                                 title={product.title}

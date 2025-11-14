@@ -7,20 +7,25 @@ import { ServicesSection } from '../../components/sections/ServicesSection';
 import { ProductSection } from '../../components/sections/ProductSection';
 import { ContactSection } from '../../components/sections/ContactSection';
 import { ClientsSection } from '@/components/sections/ClientsSection';
+import { ScrollSnapLayout } from '@/components/layout/ScrollSnapLayout';
 
 export function HomePage() {
   return (
-    <div className="min-h-screen bg-white">
-      <DesktopNavbar />
-      <MobileNavbar />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <ClientsSection />
-      <ProductSection />
-      <ContactSection />
-      <Footer />
-    </div>
+    <ScrollSnapLayout disableOnTouch>
+      <div className="min-h-screen bg-white">
+        <DesktopNavbar />
+        <MobileNavbar />
+        <main>
+          <HeroSection />
+          <AboutSection />
+          <ServicesSection />
+          <ClientsSection />
+          <ProductSection />
+          <ContactSection />
+        </main>
+        <Footer />
+      </div>
+    </ScrollSnapLayout>
   );
 }
 

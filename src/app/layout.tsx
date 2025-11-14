@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Rigzone LLC",
+  title: "Rigzone Oilfields, Energy Services",
   description: "Oilfields and Energy Services",
   icons: {
     icon: "/favicon.ico",

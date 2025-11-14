@@ -25,10 +25,15 @@ export function ProductDetail() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[600px]">
             {items.map((p: any) => {
+              const anchorId = `product-${p.slug}`;
               const isExpanded = expandedId === p.id;
               const isBlurred = expandedId !== null && expandedId !== p.id;
               return (
-                <div key={p.id} className={`${isExpanded ? 'row-span-2' : 'row-span-1'} ${isBlurred ? 'blur-[0.5px]' : ''} transition-all duration-500 ease-out will-change-transform`}>
+                <div
+                  key={p.id}
+                  id={anchorId}
+                  className={`${isExpanded ? 'row-span-2' : 'row-span-1'} ${isBlurred ? 'blur-[0.5px]' : ''} transition-all duration-500 ease-out will-change-transform scroll-mt-32`}
+                >
                   <ProductInfoCard
                     title={p.title}
                     imageUrl={p.imageUrl}

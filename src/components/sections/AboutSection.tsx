@@ -29,7 +29,7 @@ export function AboutSection() {
   }, [current]);
 
   return (
-    <section id="about" className="min-h-screen py-20 pb-96 md:pb-20 lg:pb-20 bg-white flex items-center">
+    <section id="about" className="scroll-snap-section min-h-screen py-20 pb-96 md:pb-20 lg:pb-20 bg-white flex items-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full ">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-y-12 lg:gap-y-0 gap-x-6 lg:items-stretch">
           {/* Mobile: Top Section - Badge & Intro Paragraphs */}
@@ -43,9 +43,9 @@ export function AboutSection() {
 
             {/* Main Headline */}
             <p className="text-xl lg:text-[20px] font-inter text-[#3E4C52] leading-6 tracking-[1.2px] align-left text-left mt-10">
-              RIGZONE Oilfields & Energy Services deals in specialized industrial equipment, supplies, and services for the Oilfield industry. The company was established in 2005 in the USA and has been serving the Oil & Gas, Petrochemical Industries, and various Government Departments worldwide for more than two decades. We have offices in Maryland, USA, and Karachi, Pakistan.
+              RIGZONE Oilfields & Energy Services deals in specialized industrial equipment, supplies, and services for the Oilfield industry. The company was established in 2005 in the USA and has been serving the Oil & Gas, Petrochemical Industries, and various Government Departments worldwide for more than two decades. We have offices in Maryland, USA, Abu Dhabi and Karachi, Pakistan.
             </p>
-            <p className="text-xl lg:text-[20px] font-inter text-[#3E4C52] leading-6 tracking-[1.2px] align-left text-left">
+            <p className="text-xl lg:text-[20px] font-inter text-[#3E4C52] leading-6 tracking-[1.2px] align-left text-left mt-4">
               We are committed to customer satisfaction; our prime objective is to provide highly dependable and reliable services within our areas of expertise to industries around the world.
             </p>
 

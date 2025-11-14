@@ -1,7 +1,21 @@
-import { Button } from '../ui/Button';
+'use client';
+
 import Image from 'next/image';
 import { Container } from './Container';
 import { ROUTES } from '../../routes';
+import services from '@/data/services.json';
+import products from '@/data/products.json';
+import { NavDropdown } from '../ui/NavDropdown';
+
+const serviceMenuItems = services.map((service) => ({
+  label: service.titleFull || service.title,
+  href: `${ROUTES.services}#${service.slug}`,
+}));
+
+const productMenuItems = products.map((product) => ({
+  label: product.title,
+  href: `${ROUTES.products}#product-${product.slug}`,
+}));
 
 export function DesktopNavbar() {
   return (
@@ -31,23 +45,13 @@ export function DesktopNavbar() {
               >
                 About Us
               </a>
-              <a
-                href={`${ROUTES.services}`}
-                className="text-white hover:text-[#E15E00] p-2 transition-colors"
-              >
-                Services
-              </a>
+              <NavDropdown label="Services" items={serviceMenuItems} />
+              <NavDropdown label="Products" items={productMenuItems} />
               <a
                 href={`${ROUTES.home}#clients`}
-                className="text-white hover:text-[#E15E00] p-2 transition-colors"
+                className="text-white hover:text-[#E15E00] p-2 transition-colors whitespace-nowrap"
               >
                 Clients
-              </a>
-              <a
-                href={`${ROUTES.products}`}
-                className="text-white hover:text-[#E15E00] p-2 transition-colors"
-              >
-                Products
               </a>
 
             </div>

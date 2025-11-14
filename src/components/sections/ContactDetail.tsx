@@ -30,33 +30,29 @@ export function ContactDetail() {
                             <h3 className="text-[18px] md:text-[20px] font-motor-oil tracking-[1.2px] text-[#435057]">
                                 Rigzone LLC USA
                             </h3>
-                            <div className=" text-[15px] md:text-[16px] font-inter text-[#3E4C52] leading-6 flex space-x-2 items-center text-center">
-                                <img src="/images/contact-us/location.svg" alt="location" className="w-6 h-6" />
-                                <p>418 West 28 Street, Baltimore MD, 21211, USA</p>
+                            <div className="text-[15px] md:text-[16px] font-inter text-[#3E4C52] leading-6">
+                                418 West 28 Street, Baltimore MD, 21211, USA
                             </div>
                             <div className="space-y-2">
                                 <a
                                     href="tel:+14106005589"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/phone.svg" alt="location" className="w-6 h-6" />
-                                    <p>+1.(410) 600-5589</p>
+                                    +1.(410) 600-5589
                                 </a>
                                 <a
                                     href="mailto:Info@rigzonellc.com"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/email.svg" alt="location" className="w-6 h-6" />
-                                    <p>Info@rigzonellc.com</p>
+                                    Info@rigzonellc.com
                                 </a>
                                 <a
                                     href="http://www.rigzonellc.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/globe.svg" alt="location" className="w-6 h-6" />
-                                    <p>http://www.rigzonellc.com</p>
+                                    http://www.rigzonellc.com
                                 </a>
                             </div>
                         </div>
@@ -66,45 +62,41 @@ export function ContactDetail() {
                             <h3 className="text-[18px] md:text-[20px] font-motor-oil tracking-[1.2px] text-[#435057]">
                                 Rigzone LLC Abu Dhabi
                             </h3>
-                            <div className=" text-[15px] md:text-[16px] font-inter text-[#3E4C52] leading-6 flex space-x-2 items-center text-center">
-                                <img src="/images/contact-us/location.svg" alt="location" className="w-6 h-6" />
-                                <p>P.O. Box, 70247, Abu Dhabi, UAE</p>
+                            <div className="text-[15px] md:text-[16px] font-inter text-[#3E4C52] leading-6">
+                                P.O. Box, 70247, Abu Dhabi, UAE
                             </div>
                             <div className="space-y-2">
                                 <a
                                     href="tel:+97126777836"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/phone.svg" alt="location" className="w-6 h-6" />
-                                    <p>+ 971 2 6777 836</p>
+                                    + 971 2 6777 836
                                 </a>
                                 <a
                                     href="tel:+97126777846"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors ms-8"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
                                     +971 2 6777 846
                                 </a>
                                 <a
                                     href="tel:+971508264417"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors ms-8"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
                                     +971 50 8264417
                                 </a>
                                 <a
                                     href="mailto:Info@rigzonellc.com"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/email.svg" alt="location" className="w-6 h-6" />
-                                    <p>Info@rigzonellc.com</p>
+                                    Info@rigzonellc.com
                                 </a>
                                 <a
                                     href="http://www.rigzonellc.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/globe.svg" alt="location" className="w-6 h-6" />
-                                    <p>http://www.rigzonellc.com</p>
+                                    http://www.rigzonellc.com
                                 </a>
                             </div>
                         </div>
@@ -114,47 +106,41 @@ export function ContactDetail() {
                             <h3 className="text-[18px] md:text-[20px] font-motor-oil tracking-[1.2px] text-[#435057]">
                                 Rigzone (Pvt) Ltd
                             </h3>
-                            <div className=" text-[15px] md:text-[16px] font-inter text-[#3E4C52] leading-6 flex space-x-2 items-center text-center">
-                                <img src="/images/contact-us/location.svg" alt="location" className="w-6 h-6" />
-                                <p>5C/1, 1st Floor, 6th Commercial Lane,Zamzama Blvd, Clifton, Karachi Pakistan</p>
+                            <div className="text-[15px] md:text-[16px] font-inter text-[#3E4C52] leading-6">
+                                5C/1, 1st Floor, 6th Commercial Lane,Zamzama Blvd, Clifton, Karachi Pakistan
                             </div>
                             <div className="space-y-2">
                                 <a
                                     href="tel:+922135871322"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/phone.svg" alt="location" className="w-6 h-6" />
-                                    <p>+92 21 3587 1322 – 3587 1324</p>
+                                    +92 21 3587 1322 – 3587 1324
                                 </a>
                                 <a
                                     href="tel:+922135871996"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/phone.svg" alt="location" className="w-6 h-6" />
-                                    <p>+92 21 3587 1996</p>
+                                    +92 21 3587 1996
                                 </a>
                                 <a
                                     href="tel:+923008277007"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/phone.svg" alt="location" className="w-6 h-6" />
-                                    <p>+92 300 827 7007</p>
+                                    +92 300 827 7007
                                 </a>
                                 <a
                                     href="mailto:info@rigzonellc.com"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/email.svg" alt="location" className="w-6 h-6" />
-                                    <p>info@rigzonellc.com</p>
+                                    info@rigzonellc.com
                                 </a>
                                 <a
                                     href="http://www.rigzonellc.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors flex space-x-2 items-center text-center"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
                                 >
-                                    <img src="/images/contact-us/globe.svg" alt="location" className="w-6 h-6" />
-                                    <p>http://www.rigzonellc.com</p>
+                                    http://www.rigzonellc.com
                                 </a>
                             </div>
                         </div>

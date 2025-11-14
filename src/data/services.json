@@ -4,7 +4,7 @@
     "slug": "procurement",
     "titleFull":"Procurement and Supply Chain",
     "title": "Procurement",
-    "description": "Global sourcing of certified PVF products, valves, and materials — delivered on time and to standard.",
+    "description": "Global sourcing of certified PVF products, valves, and materials, delivered on time and to standard.",
     "icon": "/images/services/supply_chain.svg",
     "accentColor": "#CE8B1E",
     "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1761907341/WARE_HOUSE_1_yulgvs.png",
@@ -43,7 +43,7 @@
     "description": "Onsite construction services for mechanical, piping and utility systems.",
     "icon": "/images/services/engineering_service.svg",
     "accentColor": "#3E4C52",
-    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182779/service4_bwfe3z.png",
+    "imageUrl": "https://res.cloudinary.com/ddxlz9oxs/image/upload/v1762182779/service5_zkm3yp.png",
     "longDescription": "Construction execution with HSE focus and schedule discipline.",
     "features": ["Mechanical erection", "Piping installation", "Pre-commissioning"]
   },

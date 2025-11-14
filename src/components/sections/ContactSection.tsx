@@ -4,7 +4,7 @@ import { ContactForm } from '../forms/ContactForm';
 
 export function ContactSection() {
   return (
-    <section id="contact" className="py-20 bg-white min-h-screen flex items-center">
+    <section id="contact" className="scroll-snap-section py-20 bg-white min-h-screen flex items-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full">
         <div className="grid grid-cols-12 gap-x-6 items-start space-y-10 md:space-y-0">
           {/* Left Column - Information */}

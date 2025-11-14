@@ -14,18 +14,19 @@ export function ServiceDetail() {
               </span>
             </div>
             <h1 className="text-3xl lg:text-[33px] font-motor-oil text-[#3E4C52] tracking-[1.2px] my-16">
-              With over two decades of experience, RIGZONE offers trusted oilfield and energy services worldwide. Our expertise ensures dependable support, quality equipment and seamless project execution<span className="font-sans">.</span>
+              With over two decades of experience<span className="font-sans">,</span> <span className='text-[#E15E00]'>RIGZONE</span> offers trusted oilfield and energy services worldwide<span className="font-sans">.</span>
             </h1>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {items.map((s) => (
-              <DetailCard
-                key={s.id}
-                title={s.title}
-                description={s.description}
-                imageUrl={s.imageUrl}
-              />
+              <div key={s.id} id={s.slug} className="scroll-mt-32">
+                <DetailCard
+                  title={s.title}
+                  description={s.description}
+                  imageUrl={s.imageUrl}
+                />
+              </div>
             ))}
           </div>
         </div>

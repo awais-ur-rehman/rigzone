@@ -93,7 +93,7 @@ export function ContactForm() {
       <div
         aria-live="polite"
         aria-atomic="true"
-        className="pointer-events-none fixed inset-x-0 top-6 z-50 flex justify-center px-4 sm:justify-end"
+        className="pointer-events-none fixed inset-x-0 top-6 z-[9999] flex justify-center px-4 sm:justify-end"
       >
         {toast && (
           <div

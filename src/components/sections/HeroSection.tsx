@@ -7,17 +7,17 @@ export function HeroSection() {
   const images = [
     "/images/hero/img1.png",
     "/images/hero/img2.png",
+    "/images/hero/img15.png",
     "/images/hero/img3.png",
+    "/images/hero/img14.png",
     "/images/hero/img4.png",
+    "/images/hero/img9.png",
     "/images/hero/img5.png",
     "/images/hero/img6.png",
-    "/images/hero/img7.png",
     "/images/hero/img8.png",
-    "/images/hero/img9.png",
-    "/images/hero/img10.png",
-    "/images/hero/img11.png",
     "/images/hero/img12.png",
-    "/images/hero/img13.png",
+    "/images/hero/img7.png",
+    "/images/hero/img17.png",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -45,7 +45,7 @@ export function HeroSection() {
   }, [current]);
 
   return (
-    <section id="home" className="relative min-h-screen flex items-end py-[10%] overflow-hidden">
+    <section id="home" className="scroll-snap-section relative min-h-screen flex items-end py-[10%] overflow-hidden">
 
       {/* Background images crossfade - render only current and previous to cut initial downloads */}
       <div className="absolute inset-0 z-0">
