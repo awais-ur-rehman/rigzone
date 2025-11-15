@@ -2,15 +2,36 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { Container } from './Container';
 import { ROUTES } from '../../routes';
+import services from '@/data/services.json';
+import products from '@/data/products.json';
 
 export function MobileNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<'services' | 'products' | null>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+    setOpenDropdown(null); // Reset dropdowns when menu is closed
   };
+
+  const toggleDropdown = (dropdown: 'services' | 'products') => {
+    setOpenDropdown(openDropdown === dropdown ? null : dropdown);
+  };
+
+  const serviceMenuItems = services.map((service) => ({
+    label: service.titleFull || service.title,
+    href: `${ROUTES.services}#${service.slug}`,
+  }));
+
+  const productMenuItems = products
+    .filter((product) => product.slug) // Only include products with slugs
+    .map((product) => ({
+      label: product.title,
+      href: `${ROUTES.products}#product-${product.slug}`,
+    }));
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#435057]  md:hidden">
@@ -61,26 +82,89 @@ export function MobileNavbar() {
               >
                 About Us
               </a>
-              <a
-                href={`${ROUTES.services}`}
-                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Services
-              </a>
+
+              {/* Services Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('services')}
+                  className="w-full text-white flex items-center justify-between px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                >
+                  <span>Services</span>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-200 ml-2 ${openDropdown === 'services' ? 'rotate-180' : ''}`}
+                  >
+                    <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {openDropdown === 'services' && (
+                  <div className="pl-6 pr-3 py-2 space-y-2">
+                    {serviceMenuItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="text-white block px-3 py-2 rounded-md text-lg font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setOpenDropdown(null);
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+
+
+              {/* Products Dropdown */}
+              <div>
+                <button
+                  onClick={() => toggleDropdown('products')}
+                  className="w-full text-white flex items-center justify-between px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                >
+                  <span>Products</span>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`transition-transform duration-200 ml-2 ${openDropdown === 'products' ? 'rotate-180' : ''}`}
+                  >
+                    <path d="M2 4l4 4 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </button>
+                {openDropdown === 'products' && (
+                  <div className="pl-6 pr-3 py-2 space-y-2">
+                    {productMenuItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="text-white block px-3 py-2 rounded-md text-lg font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setOpenDropdown(null);
+                        }}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
               <a
                 href={`${ROUTES.home}#clients`}
                 className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Clients
-              </a>
-              <a
-                href={`${ROUTES.products}`}
-                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Products
               </a>
             </div>
 

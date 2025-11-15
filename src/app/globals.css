@@ -46,6 +46,47 @@ body {
   letter-spacing: 1.2px;
 }
 
+/* Lenis Smooth Scroll Enhancements */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* Improved font rendering during scroll */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Better scroll performance */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Optimize scroll performance */
+html,
+body {
+  overflow-x: hidden;
+  will-change: scroll-position;
+}
+
 body.scroll-snap-enabled {
   scroll-snap-type: y mandatory;
   scroll-padding-top: var(--scroll-snap-offset, 96px);
