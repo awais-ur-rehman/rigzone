@@ -11,7 +11,7 @@ const staticRoutes: Array<{
     changeFrequency?: MetadataRoute.Sitemap[0]['changeFrequency'];
 }> = [
         { path: '/', priority: 1, changeFrequency: 'monthly' },
-        { path: '/about', priority: 0.9, changeFrequency: 'monthly' },
+        { path: '/companyprofile', priority: 0.9, changeFrequency: 'monthly' },
         { path: '/services', priority: 0.9, changeFrequency: 'monthly' },
         { path: '/products', priority: 0.8, changeFrequency: 'monthly' },
         { path: '/contact', priority: 0.8, changeFrequency: 'monthly' },

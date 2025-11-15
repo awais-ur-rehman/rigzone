@@ -1,4 +1,5 @@
 import { Button } from "../ui/Button";
+import { ROUTES } from "../../routes";
 
 
 export function Footer() {
@@ -24,7 +25,7 @@ export function Footer() {
                 variant="footer"
                 size="md"
                 className="h-12"
-                href="/about"
+                href={ROUTES.about}
               />
               <Button
                 text="Get Started Now"

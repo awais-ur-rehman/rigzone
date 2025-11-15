@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Button } from "../ui/Button";
+import { ROUTES } from "../../routes";
 
 export function HeroSection() {
   const images = [
@@ -88,7 +89,7 @@ export function HeroSection() {
 
             <div className="flex items-center md:gap-4 gap-1">
               <Button text="Get Started Now" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="lg:w-4 lg:h-4 w-3 h-3" />} variant="primary" size="lg" href="/contact" />
-              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="lg:w-4 lg:h-4 w-3 h-3" />} variant="secondary" size="lg" href="/about" />
+              <Button text="Discover More" icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="lg:w-4 lg:h-4 w-3 h-3" />} variant="secondary" size="lg" href={ROUTES.about} />
             </div>
           </div>
         </div>

@@ -9,10 +9,8 @@ export function AboutPage() {
     <div className="min-h-screen bg-white">
       <DesktopNavbar />
       <MobileNavbar />
-
       <AboutDetail />
-
-      <ContactSection />
+      <ContactSection variant="about" />
       <Footer />
     </div>
   );

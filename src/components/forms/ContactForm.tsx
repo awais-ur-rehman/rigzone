@@ -18,7 +18,12 @@ const contactFormSchema = z.object({
 
 type ContactFormData = z.infer<typeof contactFormSchema>;
 
-export function ContactForm() {
+type ContactFormProps = {
+  variant?: 'default' | 'about';
+};
+
+export function ContactForm({ variant = 'default' }: ContactFormProps) {
+  const isAboutVariant = variant === 'about';
   const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
   const [isRecaptchaVerified, setIsRecaptchaVerified] = useState(false);
   const [toast, setToast] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
@@ -115,10 +120,14 @@ export function ContactForm() {
         {/* Section 1: Message */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+              isAboutVariant ? 'bg-[#E15E00]' : 'bg-[var(--oxford-blue)]'
+            }`}>
               <span className="text-white font-semibold">1</span>
             </div>
-            <h3 className="text-xl font-bold text-[var(--oxford-blue)]">
+            <h3 className={`text-xl font-bold ${
+              isAboutVariant ? 'text-[#FCFDFE]' : 'text-[var(--oxford-blue)]'
+            }`}>
               Message
             </h3>
           </div>
@@ -127,6 +136,7 @@ export function ContactForm() {
             label="Your Message"
             textarea
             placeholder="Type Your Message"
+            variant={variant}
             {...register('message')}
             error={errors.message?.message}
           />
@@ -135,10 +145,14 @@ export function ContactForm() {
         {/* Section 2: Sender Information */}
         <div className="space-y-4 mt-16">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full bg-[var(--oxford-blue)] flex items-center justify-center">
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+              isAboutVariant ? 'bg-[#E15E00]' : 'bg-[var(--oxford-blue)]'
+            }`}>
               <span className="text-white font-semibold">2</span>
             </div>
-            <h3 className="text-xl font-bold text-[var(--oxford-blue)]">
+            <h3 className={`text-xl font-bold ${
+              isAboutVariant ? 'text-[#FCFDFE]' : 'text-[var(--oxford-blue)]'
+            }`}>
               Sender Information
             </h3>
           </div>
@@ -147,12 +161,14 @@ export function ContactForm() {
             <Input
               label="First Name*"
               placeholder="Type Your First Name"
+              variant={variant}
               {...register('firstName')}
               error={errors.firstName?.message}
             />
             <Input
               label="Last Name*"
               placeholder="Type Your Last Name"
+              variant={variant}
               {...register('lastName')}
               error={errors.lastName?.message}
             />
@@ -162,6 +178,7 @@ export function ContactForm() {
             label="Email*"
             type="email"
             placeholder="Enter your email address"
+            variant={variant}
             {...register('email')}
             error={errors.email?.message}
           />
