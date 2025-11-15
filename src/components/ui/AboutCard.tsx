@@ -36,13 +36,13 @@ export function AboutCard({ title, image, items }: AboutCardProps) {
           transformOrigin: 'bottom',
         }}
       >
-        <div className={`h-full flex flex-col transition-all duration-500 ${isHovered ? 'p-6' : 'p-4'}`}>
-          {/* Title and Arrow Row */}
-          <div className="flex items-center justify-between flex-shrink-0">
-            <h3 className="text-white text-lg font-inter font-semibold tracking-[1.2px]">
+        <div className={`h-full flex flex-col transition-all duration-500 ${isHovered ? 'p-6 justify-end' : 'px-4 py-4'}`}>
+          {/* Title and Arrow Row - Aligned to left with gap-1 */}
+          <div className="flex items-end flex-shrink-0 w-full gap-1">
+            <h3 className="text-white text-lg font-inter font-semibold tracking-[1.2px] text-left whitespace-pre-line leading-tight">
               {title}
             </h3>
-            <div className="flex-shrink-0 ml-4">
+            <div className="flex-shrink-0">
               {isHovered ? (
                 <img
                   src="/images/about/ARROW-DOWN.svg"
@@ -59,16 +59,16 @@ export function AboutCard({ title, image, items }: AboutCardProps) {
             </div>
           </div>
 
-          {/* Items List - Only visible on hover */}
+          {/* Items List - Only visible on hover, aligned to bottom */}
           <div
-            className={`flex-1 overflow-y-auto transition-opacity duration-300 ${isHovered ? 'opacity-100 mt-6' : 'opacity-0 mt-0 h-0'
+            className={`transition-opacity duration-300 ${isHovered ? 'opacity-100 mt-6' : 'opacity-0 h-0'
               }`}
           >
-            <ol className="space-y-2 list-decimal list-inside">
+            <ol className="space-y-2 list-decimal list-inside pl-1">
               {items.map((item, index) => (
                 <li
                   key={index}
-                  className="text-white text-base font-inter tracking-[1.2px]"
+                  className="text-white text-base font-inter tracking-[1.2px] leading-relaxed"
                   style={{
                     animationDelay: `${index * 0.05}s`,
                   }}

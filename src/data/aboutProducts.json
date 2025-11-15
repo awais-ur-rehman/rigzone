@@ -12,7 +12,7 @@
   },
   {
     "id": "equipment-instrumentation",
-    "title": "Equipment and Instrumentation",
+    "title": "Equipment and\nInstrumentation",
     "image": "/images/about/EQUIPMENTANDINSTRUMENTATION.png",
     "items": [
       "Automation and Control",
@@ -29,7 +29,7 @@
   },
   {
     "id": "pipes-pumps-valves",
-    "title": "Pipes Pumps and Valves",
+    "title": "Pipes Pumps\nand Valves",
     "image": "/images/about/PIPESPUMPSANDVALVES.png",
     "items": [
       "Pipe & Tubular products",
@@ -41,7 +41,7 @@
   },
   {
     "id": "refinery-petrochemical",
-    "title": "Refinery and Petrochemical",
+    "title": "Refinery and\nPetrochemical",
     "image": "/images/about/REFINERYANDPETROCHEMICAL.png",
     "items": [
       "Heat Exchangers",
@@ -53,7 +53,7 @@
   },
   {
     "id": "mechanical-electrical",
-    "title": "Mechanical and Electrical Supply",
+    "title": "Mechanical and\nElectrical Supply",
     "image": "/images/about/MECHANICALANDELECTRICALSUPPLY.png",
     "items": [
       "Engines, Motors and Parts",
@@ -67,7 +67,7 @@
   },
   {
     "id": "oilfields-safety",
-    "title": "Oilfields Safety Supply",
+    "title": "Oilfields\nSafety Supply",
     "image": "/images/about/OILFIELDSSAFETYSUPPLY.png",
     "items": [
       "Fire Protection HSQE",
