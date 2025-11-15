@@ -1,0 +1,79 @@
+[
+  {
+    "id": "drilling",
+    "title": "Drilling",
+    "image": "/images/about/DRILLING.png",
+    "items": [
+      "Onshore Drilling Rigs",
+      "Offshore Drilling Rigs",
+      "Oilfield Drilling Equipment",
+      "Oilfield Drilling Chemicals and Mud"
+    ]
+  },
+  {
+    "id": "equipment-instrumentation",
+    "title": "Equipment and Instrumentation",
+    "image": "/images/about/EQUIPMENTANDINSTRUMENTATION.png",
+    "items": [
+      "Automation and Control",
+      "Flow Instrumentation",
+      "Instrumentation and Tools",
+      "Laboratory Equipment",
+      "Marine and Subsea Equipment",
+      "Measuring Instruments",
+      "Offshore Instrumentation",
+      "Process and Control Equipment",
+      "Downhole Instruments",
+      "Completion Tools"
+    ]
+  },
+  {
+    "id": "pipes-pumps-valves",
+    "title": "Pipes Pumps and Valves",
+    "image": "/images/about/PIPESPUMPSANDVALVES.png",
+    "items": [
+      "Pipe & Tubular products",
+      "Pipe Fittings and Flanges",
+      "Valves and Actuators",
+      "OCTG - Casing, Tubing, Drill Pipe",
+      "Hoses and Fluid Handling"
+    ]
+  },
+  {
+    "id": "refinery-petrochemical",
+    "title": "Refinery and Petrochemical",
+    "image": "/images/about/REFINERYANDPETROCHEMICAL.png",
+    "items": [
+      "Heat Exchangers",
+      "Pressure Vessels and Boilers",
+      "Petrochemical & Refinery Equipment",
+      "Separators and Filters",
+      "Compressors and Turbines"
+    ]
+  },
+  {
+    "id": "mechanical-electrical",
+    "title": "Mechanical and Electrical Supply",
+    "image": "/images/about/MECHANICALANDELECTRICALSUPPLY.png",
+    "items": [
+      "Engines, Motors and Parts",
+      "Generators and Transformers",
+      "Heavy Equipment and Machinery",
+      "Lifting Equipment and Cranes",
+      "Lighting and Electrical Products",
+      "Mechanical and Electrical Parts",
+      "Welding and Cutting Equipment"
+    ]
+  },
+  {
+    "id": "oilfields-safety",
+    "title": "Oilfields Safety Supply",
+    "image": "/images/about/OILFIELDSSAFETYSUPPLY.png",
+    "items": [
+      "Fire Protection HSQE",
+      "Hazardous Area Supplies",
+      "Safety and Protection Equipment"
+    ]
+  }
+]
+
