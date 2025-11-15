@@ -42,7 +42,7 @@ export function AboutDetail() {
                     </div>
 
                     {/* Expertise Sections - Main Heading on Left, Content on Right */}
-                    <div className="grid grid-cols-12 gap-x-4 gap-y-8 ">
+                    <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-start">
                         {/* Left Column - Main Heading */}
                         <div className="col-span-12 lg:col-span-4">
                             <h2 className="text-[54px] font-motor-oil text-[#FCFDFE] leading-16 tracking-[1.2px]">
@@ -51,7 +51,7 @@ export function AboutDetail() {
                         </div>
 
                         {/* Right Column - Trading, Warehouse, and Engineering */}
-                        <div className="col-span-12 lg:col-span-8">
+                        <div className="col-span-12 lg:col-span-8 lg:pt-[135px]">
                             <div className="grid grid-cols-12 gap-x-4 gap-y-8 items-start">
                                 {/* Left Sub-column - Trading and Warehouse */}
                                 <div className="col-span-12 lg:col-span-6 space-y-12">
