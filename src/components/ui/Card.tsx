@@ -26,7 +26,7 @@ export function Card({
     return (
         <div
             style={{ ['--accent-color' as any]: accentColor }}
-            className={`relative bg-[var(--anti-flash-white)] overflow-hidden px-6 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] group cursor-pointer transition-all duration-700 ease-in-out h-[400px] ${className}`}
+            className={`relative bg-[var(--anti-flash-white)] overflow-hidden px-6 py-8 shadow-[0_4px_4px_rgba(0,0,0,0.25)] group transition-all duration-700 ease-in-out h-[400px] ${className}`}
         >
             {/* Ripple Effect (stays inside card) */}
             <div
@@ -90,7 +90,7 @@ export function Card({
                         <button
                             onClick={onCtaClick}
                             className="flex items-center space-x-2 font-regular text-[#435057] font-motor-oil  tracking-[1.2px] text-[20px] 
-              transition-colors duration-700 delay-200 group-hover:text-white"
+              transition-colors duration-700 delay-200 group-hover:text-white cursor-pointer"
                         >
                             <span>{ctaText}</span>
                             {ctaIcon && <div className="w-4 h-4">{ctaIcon}</div>}

@@ -24,7 +24,7 @@ export function DesktopNavbar() {
         <div className="grid grid-cols-12 items-center h-18 gap-x-2 md:gap-x-4 lg:gap-x-6">
           {/* Logo */}
           <div className="col-span-2 md:col-span-2 lg:col-span-2 flex items-center">
-            <a href={`${ROUTES.home}`} aria-label="Home" >
+            <a href={`${ROUTES.home}`} aria-label="Home" className="cursor-pointer">
               <Image
                 src="/images/logo/Logo.svg"
                 alt="RigZone Logo"
@@ -41,7 +41,7 @@ export function DesktopNavbar() {
             <div className="flex justify-center items-center space-x-2 md:space-x-4 lg:space-x-8">
               <a
                 href={`${ROUTES.about}`}
-                className="text-white hover:text-[#E15E00]  p-2 transition-colors"
+                className="text-white hover:text-[#E15E00]  p-2 transition-colors cursor-pointer"
               >
                 About Us
               </a>
@@ -49,7 +49,7 @@ export function DesktopNavbar() {
               <NavDropdown label="Products" items={productMenuItems} />
               <a
                 href={`${ROUTES.home}#clients`}
-                className="text-white hover:text-[#E15E00] p-2 transition-colors whitespace-nowrap"
+                className="text-white hover:text-[#E15E00] p-2 transition-colors whitespace-nowrap cursor-pointer"
               >
                 Clients
               </a>
@@ -61,7 +61,7 @@ export function DesktopNavbar() {
           <div className="col-span-4 md:col-span-3 lg:col-span-2 justify-self-end">
             <a
               href={`${ROUTES.contact}`}
-              className="inline-flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px] text-[16px] bg-[#E15E00] border border-[#E15E00] text-[#F6F4EB] hover:bg-[#c95600] focus:ring-[#E15E00] shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold px-3 py-2 md:px-6 md:py-3"
+              className="inline-flex items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px] text-[16px] bg-[#E15E00] border border-[#E15E00] text-[#F6F4EB] hover:bg-[#c95600] focus:ring-[#E15E00] shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold px-3 py-2 md:px-6 md:py-3 cursor-pointer"
             >
               Contact Us
               <img

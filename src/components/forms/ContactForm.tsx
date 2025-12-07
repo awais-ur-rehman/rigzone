@@ -109,7 +109,7 @@ export function ContactForm({ variant = 'default' }: ContactFormProps) {
             <button
               type="button"
               onClick={() => setToast(null)}
-              className="ml-2 shrink-0 text-xs font-semibold uppercase tracking-wide text-[var(--oxford-blue)]"
+              className="ml-2 shrink-0 text-xs font-semibold uppercase tracking-wide text-[var(--oxford-blue)] cursor-pointer"
             >
               Close
             </button>
@@ -120,14 +120,12 @@ export function ContactForm({ variant = 'default' }: ContactFormProps) {
         {/* Section 1: Message */}
         <div className="space-y-4">
           <div className="flex items-center gap-3">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              isAboutVariant ? 'bg-[#E15E00]' : 'bg-[var(--oxford-blue)]'
-            }`}>
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isAboutVariant ? 'bg-[#E15E00]' : 'bg-[var(--oxford-blue)]'
+              }`}>
               <span className="text-white font-semibold">1</span>
             </div>
-            <h3 className={`text-xl font-bold ${
-              isAboutVariant ? 'text-[#FCFDFE]' : 'text-[var(--oxford-blue)]'
-            }`}>
+            <h3 className={`text-xl font-bold ${isAboutVariant ? 'text-[#FCFDFE]' : 'text-[var(--oxford-blue)]'
+              }`}>
               Message
             </h3>
           </div>
@@ -145,14 +143,12 @@ export function ContactForm({ variant = 'default' }: ContactFormProps) {
         {/* Section 2: Sender Information */}
         <div className="space-y-4 mt-16">
           <div className="flex items-center gap-3">
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
-              isAboutVariant ? 'bg-[#E15E00]' : 'bg-[var(--oxford-blue)]'
-            }`}>
+            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${isAboutVariant ? 'bg-[#E15E00]' : 'bg-[var(--oxford-blue)]'
+              }`}>
               <span className="text-white font-semibold">2</span>
             </div>
-            <h3 className={`text-xl font-bold ${
-              isAboutVariant ? 'text-[#FCFDFE]' : 'text-[var(--oxford-blue)]'
-            }`}>
+            <h3 className={`text-xl font-bold ${isAboutVariant ? 'text-[#FCFDFE]' : 'text-[var(--oxford-blue)]'
+              }`}>
               Sender Information
             </h3>
           </div>

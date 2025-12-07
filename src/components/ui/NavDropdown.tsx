@@ -33,7 +33,7 @@ export function NavDropdown({ label, items }: NavDropdownProps) {
       <button
         type="button"
         onClick={() => setOpen((prev) => !prev)}
-        className="inline-flex items-center gap-1 text-white hover:text-[#E15E00] p-2 transition-colors"
+        className="inline-flex items-center gap-1 text-white hover:text-[#E15E00] p-2 transition-colors cursor-pointer"
         aria-haspopup="menu"
         aria-expanded={open}
       >
@@ -59,7 +59,7 @@ export function NavDropdown({ label, items }: NavDropdownProps) {
             <Link
               key={item.href}
               href={item.href}
-              className="block px-4 py-2 hover:bg-[#E15E00] transition-colors"
+              className="block px-4 py-2 hover:bg-[#E15E00] transition-colors cursor-pointer"
               onClick={() => setOpen(false)}
             >
               {item.label}

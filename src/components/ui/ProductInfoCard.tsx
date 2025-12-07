@@ -52,7 +52,7 @@ export function ProductInfoCard({ title, imageUrl, summary, sizes, standards, sc
           <button
             type="button"
             onClick={onToggle}
-            className="inline-flex items-center gap-2 text-[20px] font-motor-oil font-regular text-[#3E4C52] hover:text-[#E15E00] transition-colors"
+            className="inline-flex items-center gap-2 text-[20px] font-motor-oil font-regular text-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
             aria-label={`Read more about ${title}`}
           >
             {isExpanded ? 'Read Less' : 'Read More'} <img src="/images/services/red-arrow.svg" alt="Arrow" className="w-3 h-3" />

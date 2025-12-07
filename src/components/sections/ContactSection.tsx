@@ -36,7 +36,7 @@ export function ContactSection({ variant = 'default' }: ContactSectionProps) {
                   </p>
                   <a
                     href="mailto:info@rigzonellc.com"
-                    className="text-base md:text-[18px] font-inter font-bold text-[#E15E00] hover:text-[#c95600] transition-colors"
+                    className="text-base md:text-[18px] font-inter font-bold text-[#E15E00] hover:text-[#c95600] transition-colors cursor-pointer"
                   >
                     info@rigzonellc.com
                   </a>

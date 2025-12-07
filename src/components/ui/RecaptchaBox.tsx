@@ -46,7 +46,8 @@ export function RecaptchaBox({ onVerified, onFailed }: RecaptchaBoxProps) {
             aria-label="reCAPTCHA checkbox"
             role="checkbox"
             aria-checked={status === 'passed'}
-            className="flex items-center border border-gray-300 px-4 py-2 bg-white min-w-[360px] shadow [&:not(:disabled)]:hover:shadow-md transition-shadow"
+            className="flex items-center border border-gray-300 px-4 py-2 bg-white min-w-[360px] shadow [&:not(:disabled)]:hover:shadow-md transition-shadow cursor-pointer disabled:cursor-not-allowed"
+            disabled={status === 'loading'}
         >
             <span
                 className={`w-6 h-6 border mr-4 ${status === 'passed' ? 'bg-[#E15E00] border-[#E15E00]' : 'border-gray-400'} flex items-center justify-center`}

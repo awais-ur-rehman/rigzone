@@ -33,7 +33,7 @@ export function Footer() {
                 variant="footerSecondary"
                 size="md"
                 className="h-12"
-                href="/contact"
+                href={ROUTES.contact}
               />
             </div>
           </div>
@@ -45,18 +45,20 @@ export function Footer() {
           {/* Left branding column */}
           <div className="col-span-12 lg:col-span-3 space-y-8 items-start justify-center flex flex-col">
             <div className="flex justify-start">
-              <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-20 w-auto object-cover" />
+              <a href={ROUTES.home} className="cursor-pointer">
+                <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-20 w-auto object-cover" />
+              </a>
             </div>
             <p className="text-[16px] font-inter text-white tracking-[1.2px] leading-6 max-w-[300px] text-start">
               Rigzone delivers reliable oilfield equipment and engineering services, supporting energy and industrial
               projects across the USA, Middle East, and South Asia.
             </p>
             <div className="flex items-center space-x-6 justify-center mt-6">
-              <a href="#" aria-label="Facebook"><img className="h-8 w-8" src="/icons/social/facebook.svg" alt="facebook" /></a>
-              <a href="#" aria-label="Instagram"><img className="h-8 w-8" src="/icons/social/instagram.svg" alt="instagram" /></a>
-              <a href="#" aria-label="LinkedIn"><img className="h-8 w-8" src="/icons/social/linkedin.svg" alt="linkedin" /></a>
-              <a href="https://www.stackmail.com/" target="_blank" rel="noopener noreferrer" aria-label="Google"><img className="h-9 w-9" src="/icons/social/webmail.svg" alt="google" /></a>
-              <a href="#" aria-label="Google"><img className="h-8 w-8" src="/icons/social/google.svg" alt="google" /></a>
+              <a href="#" aria-label="Facebook" className="cursor-pointer"><img className="h-8 w-8" src="/icons/social/facebook.svg" alt="facebook" /></a>
+              <a href="#" aria-label="Instagram" className="cursor-pointer"><img className="h-8 w-8" src="/icons/social/instagram.svg" alt="instagram" /></a>
+              <a href="#" aria-label="LinkedIn" className="cursor-pointer"><img className="h-8 w-8" src="/icons/social/linkedin.svg" alt="linkedin" /></a>
+              <a href="https://www.stackmail.com/" target="_blank" rel="noopener noreferrer" aria-label="Google" className="cursor-pointer"><img className="h-9 w-9" src="/icons/social/webmail.svg" alt="google" /></a>
+              <a href="#" aria-label="Google" className="cursor-pointer"><img className="h-8 w-8" src="/icons/social/google.svg" alt="google" /></a>
 
             </div>
           </div>
@@ -65,10 +67,10 @@ export function Footer() {
           <div className="col-span-12 lg:col-span-2 mt-0 lg:mt-6 space-y-6">
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-white mb-4">Top Links</h4>
             <ul className="space-y-3 text-white text-[16px] space-y-4 font-inter">
-              <li><a href="#about">About Us</a></li>
-              <li><a href="#services">Our Services</a></li>
-              <li><a href="#products">Our Products</a></li>
-              <li><a href="#contact">Contact Us</a></li>
+              <li><a href={ROUTES.about} className="cursor-pointer">About Us</a></li>
+              <li><a href={ROUTES.services} className="cursor-pointer">Our Services</a></li>
+              <li><a href={ROUTES.products} className="cursor-pointer">Our Products</a></li>
+              <li><a href={ROUTES.contact} className="cursor-pointer">Contact Us</a></li>
             </ul>
           </div>
 
@@ -77,18 +79,18 @@ export function Footer() {
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-white mb-4">Our Services</h4>
             <div className="grid grid-cols-2 gap-2 text-[16px] font-inter text-white">
               <ul className="space-y-4 text-white">
-                <li><a href="/services#service-detail">Procurement</a></li>
-                <li><a href="/services#service-detail">Engineering</a></li>
-                <li><a href="/services#service-detail">Fabrication</a></li>
-                <li><a href="/services#service-detail">Construction</a></li>
-                <li><a href="/services#service-detail">Commissioning & Startup</a></li>
-                <li><a href="/services#service-detail">Consultancy Services</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Procurement</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Engineering</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Fabrication</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Construction</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Commissioning & Startup</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Consultancy Services</a></li>
               </ul>
               <ul className="space-y-4 text-white">
-                <li><a href="/services#service-detail">Well Stimulation</a></li>
-                <li><a href="/services#service-detail">Coil Tubing</a></li>
-                <li><a href="/services#service-detail">Marine Services</a></li>
-                <li><a href="/services#service-detail">Completion & Downhole Tools</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Well Stimulation</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Coil Tubing</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Marine Services</a></li>
+                <li><a href="/services#service-detail" className="cursor-pointer">Completion & Downhole Tools</a></li>
               </ul>
             </div>
           </div>
@@ -100,7 +102,7 @@ export function Footer() {
             </h4>
             <div className="flex flex-col space-y-6 items-start lg:items-end">
               <input type="email" placeholder="Your Email Address..." className="w-full border border-[#CAD2D7] px-4 py-3 text-[16px] font-inter text-white focus:outline-none placeholder:text-white" />
-              <button className="inline-flex items-center w-full justify-center bg-[#E15E00] text-white px-6 py-3 text-[16px] font-[var(--font-motor-oil)] tracking-[1.2px] hover:bg-[#c95600]">
+              <button className="inline-flex items-center w-full justify-center bg-[#E15E00] text-white px-6 py-3 text-[16px] font-[var(--font-motor-oil)] tracking-[1.2px] hover:bg-[#c95600] cursor-pointer">
                 Subscribe <img src="/icons/navigation/arrow.svg" alt="arrow" className="ml-2 h-4 w-4" />
               </button>
             </div>
@@ -112,12 +114,12 @@ export function Footer() {
           <div className="grid grid-cols-1 lg:grid-cols-3 items-center">
             <p className="order-1 lg:order-1 text-center lg:text-left">©Copyright 2025. Rigzone LLC. All rights reserved</p>
             <div className="order-3 lg:order-2 flex justify-center align-end mt-4 lg:mt-0">
-              <span className="flex items-center"><span className="relative bottom-2">Powered by</span><img src="/icons/social/bridgeframe.svg" alt="bridgeframe" className="h-12 w-auto relative -left-5 bottom-4" /></span>
+              <span className="flex items-center"><span className="relative bottom-0">Powered by</span><img src="/icons/social/bridgeframe.svg" alt="bridgeframe" className="h-14 w-auto relative -left-6 cursor-pointer bottom-3" /></span>
             </div>
             <div className="order-2 lg:order-3 flex items-center justify-center lg:justify-end space-x-6 mt-4 lg:mt-0">
-              <a href="#">Terms of Use</a>
-              <a href="#">Privacy Policy</a>
-              <a href="#">Disclaimer</a>
+              <a href="#" className="cursor-pointer">Terms of Use</a>
+              <a href="#" className="cursor-pointer">Privacy Policy</a>
+              <a href="#" className="cursor-pointer">Disclaimer</a>
             </div>
           </div>
         </div>

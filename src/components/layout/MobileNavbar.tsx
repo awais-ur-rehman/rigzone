@@ -41,7 +41,7 @@ export function MobileNavbar() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <a href={`${ROUTES.home}`} aria-label="Home">
+            <a href={`${ROUTES.home}`} aria-label="Home" className="cursor-pointer">
               <Image
                 src="/images/logo/Logo.svg"
                 alt="RigZone Logo"
@@ -57,7 +57,7 @@ export function MobileNavbar() {
           <div className="flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-white hover:text-[#E15E00] focus:outline-none transition-colors"
+              className="text-white hover:text-[#E15E00] focus:outline-none transition-colors cursor-pointer"
               aria-label="Toggle menu"
             >
               <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +77,7 @@ export function MobileNavbar() {
             <div className='space-y-4 font-motor-oil'>
               <a
                 href={`${ROUTES.about}`}
-                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 About Us
@@ -87,7 +87,7 @@ export function MobileNavbar() {
               <div>
                 <button
                   onClick={() => toggleDropdown('services')}
-                  className="w-full text-white flex items-center justify-between px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                  className="w-full text-white flex items-center justify-between px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
                 >
                   <span>Services</span>
                   <svg
@@ -107,7 +107,7 @@ export function MobileNavbar() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="text-white block px-3 py-2 rounded-md text-lg font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                        className="text-white block px-3 py-2 rounded-md text-lg font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
                         onClick={() => {
                           setIsMenuOpen(false);
                           setOpenDropdown(null);
@@ -126,7 +126,7 @@ export function MobileNavbar() {
               <div>
                 <button
                   onClick={() => toggleDropdown('products')}
-                  className="w-full text-white flex items-center justify-between px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                  className="w-full text-white flex items-center justify-between px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
                 >
                   <span>Products</span>
                   <svg
@@ -146,7 +146,7 @@ export function MobileNavbar() {
                       <Link
                         key={item.href}
                         href={item.href}
-                        className="text-white block px-3 py-2 rounded-md text-lg font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                        className="text-white block px-3 py-2 rounded-md text-lg font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
                         onClick={() => {
                           setIsMenuOpen(false);
                           setOpenDropdown(null);
@@ -161,7 +161,7 @@ export function MobileNavbar() {
 
               <a
                 href={`${ROUTES.home}#clients`}
-                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors"
+                className="text-white block px-3 py-2 rounded-md text-2xl font-medium hover:bg-[#3E4C52] hover:text-[#E15E00] transition-colors cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Clients
@@ -171,7 +171,7 @@ export function MobileNavbar() {
             <div className="px-3">
               <a
                 href={`${ROUTES.contact}`}
-                className="inline-flex w-full items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px] text-[16px] bg-[#E15E00] border border-[#E15E00] text-[#F6F4EB] hover:bg-[#c95600] focus:ring-[#E15E00] shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold px-6 py-3"
+                className="inline-flex w-full items-center justify-center transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 font-[var(--font-motor-oil)] tracking-[1.2px] text-[16px] bg-[#E15E00] border border-[#E15E00] text-[#F6F4EB] hover:bg-[#c95600] focus:ring-[#E15E00] shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-bold px-6 py-3 cursor-pointer"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Contact Us

@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { Button } from '../ui/Button';
 import { useEffect, useState } from 'react';
+import { ROUTES } from '../../routes';
 
 export function AboutSection() {
   const images = [
@@ -81,7 +82,7 @@ export function AboutSection() {
                 }
                 variant="primary"
                 size="md"
-                href="/about"
+                href={ROUTES.about}
               />
             </div>
           </div>
@@ -160,7 +161,7 @@ export function AboutSection() {
                   }
                   variant="primary"
                   size="md"
-                  href="/about"
+                  href={ROUTES.about}
                 />
               </div>
             </div>

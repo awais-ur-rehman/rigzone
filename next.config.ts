@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   trailingSlash: true,
+  // Set Turbopack root to current directory to avoid lockfile detection issues
+  turbopack: {
+    root: '.',
+  },
 };
 
 export default nextConfig;

@@ -36,13 +36,13 @@ export function ContactDetail() {
                             <div className="space-y-2">
                                 <a
                                     href="tel:+14106005589"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     +1.(410) 600-5589
                                 </a>
                                 <a
                                     href="mailto:Info@rigzonellc.com"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     Info@rigzonellc.com
                                 </a>
@@ -50,7 +50,7 @@ export function ContactDetail() {
                                     href="http://www.rigzonellc.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     http://www.rigzonellc.com
                                 </a>
@@ -68,25 +68,25 @@ export function ContactDetail() {
                             <div className="space-y-2">
                                 <a
                                     href="tel:+97126777836"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     + 971 2 6777 836
                                 </a>
                                 <a
                                     href="tel:+97126777846"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     +971 2 6777 846
                                 </a>
                                 <a
                                     href="tel:+971508264417"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     +971 50 8264417
                                 </a>
                                 <a
                                     href="mailto:Info@rigzonellc.com"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     Info@rigzonellc.com
                                 </a>
@@ -94,7 +94,7 @@ export function ContactDetail() {
                                     href="http://www.rigzonellc.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     http://www.rigzonellc.com
                                 </a>
@@ -112,25 +112,25 @@ export function ContactDetail() {
                             <div className="space-y-2">
                                 <a
                                     href="tel:+922135871322"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     +92 21 3587 1322 – 3587 1324
                                 </a>
                                 <a
                                     href="tel:+922135871996"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     +92 21 3587 1996
                                 </a>
                                 <a
                                     href="tel:+923008277007"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     +92 300 827 7007
                                 </a>
                                 <a
                                     href="mailto:info@rigzonellc.com"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     info@rigzonellc.com
                                 </a>
@@ -138,7 +138,7 @@ export function ContactDetail() {
                                     href="http://www.rigzonellc.com"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors"
+                                    className="block text-[15px] md:text-[16px] font-inter text-[#435057] hover:text-[#E15E00] transition-colors cursor-pointer"
                                 >
                                     http://www.rigzonellc.com
                                 </a>
