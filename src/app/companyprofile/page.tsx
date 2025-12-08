@@ -1,8 +1,17 @@
-import AboutPage from '../../pages/about/AboutPage';
+import { DesktopNavbar } from '@/components/layout/DesktopNavbar';
+import { MobileNavbar } from '@/components/layout/MobileNavbar';
+import { Footer } from '@/components/layout/Footer';
+import { ContactSection } from '@/components/sections/home/ContactSection';
+import { AboutDetail } from '@/components/sections/companyprofile/AboutDetail';
 
-export default function About() {
+export default function CompanyProfile() {
   return (
-    <AboutPage />
+    <div className="min-h-screen bg-white">
+      <DesktopNavbar />
+      <MobileNavbar />
+      <AboutDetail />
+      <ContactSection variant="about" />
+      <Footer />
+    </div>
   );
 }
-

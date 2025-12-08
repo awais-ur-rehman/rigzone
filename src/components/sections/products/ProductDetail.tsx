@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from 'react';
 import products from '@/data/products.json';
-import { ProductInfoCard } from '../ui/ProductInfoCard';
+import { ProductInfoCard } from '@/components/ui/ProductInfoCard';
 
 export function ProductDetail() {
   const items = useMemo(() => products, []);

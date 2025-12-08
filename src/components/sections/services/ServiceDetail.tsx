@@ -1,4 +1,4 @@
-import { DetailCard } from '../ui/DetailCard';
+import { DetailCard } from '@/components/ui/DetailCard';
 import services from '@/data/services.json';
 
 export function ServiceDetail() {

@@ -1,8 +1,8 @@
 "use client";
 import Image from "next/image";
 import { useEffect, useState } from "react";
-import { Button } from "../ui/Button";
-import { ROUTES } from "../../routes";
+import { Button } from "@/components/ui/Button";
+import { ROUTES } from "@/routes";
 
 export function HeroSection() {
   const images = [

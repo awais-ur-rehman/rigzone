@@ -1,10 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { Card } from '../ui/Card';
+import { Card } from '@/components/ui/Card';
 import servicesData from '@/data/services.json';
 import { useRouter } from 'next/navigation';
-import { ROUTES } from '../../routes';
+import { ROUTES } from '@/routes';
 
 export function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);

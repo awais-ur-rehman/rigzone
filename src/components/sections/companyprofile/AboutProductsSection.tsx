@@ -1,6 +1,6 @@
 'use client';
 
-import { AboutCard } from '../ui/AboutCard';
+import { AboutCard } from '@/components/ui/AboutCard';
 import aboutProductsData from '@/data/aboutProducts.json';
 
 export function AboutProductsSection() {

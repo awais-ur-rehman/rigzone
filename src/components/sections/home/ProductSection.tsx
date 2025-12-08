@@ -1,9 +1,9 @@
 'use client';
 
-import { ProductCard } from '../ui/ProductCard';
-import { Button } from '../ui/Button';
+import { ProductCard } from '@/components/ui/ProductCard';
+import { Button } from '@/components/ui/Button';
 import productsData from '@/data/products.json';
-import { ROUTES } from '../../routes';
+import { ROUTES } from '@/routes';
 
 export function ProductSection() {
     const featuredProducts = productsData.slice(0, 10);

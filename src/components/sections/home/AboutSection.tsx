@@ -1,8 +1,8 @@
 "use client";
 import Image from 'next/image';
-import { Button } from '../ui/Button';
+import { Button } from '@/components/ui/Button';
 import { useEffect, useState } from 'react';
-import { ROUTES } from '../../routes';
+import { ROUTES } from '@/routes';
 
 export function AboutSection() {
   const images = [
@@ -149,7 +149,7 @@ export function AboutSection() {
               </div>
 
               {/* Learn More Button */}
-              <div className="pt-4 mt-auto flex justify-end">
+              <div className="pt-4 mt-auto flex justify-center">
                 <Button
                   text="Learn More"
                   icon={
@@ -162,6 +162,7 @@ export function AboutSection() {
                   variant="primary"
                   size="md"
                   href={ROUTES.about}
+                  className="w-full"
                 />
               </div>
             </div>
