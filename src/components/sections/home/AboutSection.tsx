@@ -30,7 +30,7 @@ export function AboutSection() {
   }, [current]);
 
   return (
-    <section id="about" className="scroll-snap-section min-h-screen py-20 pb-96 md:pb-20 lg:pb-20 bg-white flex items-center">
+    <section id="about" className="scroll-snap-section min-h-screen py-20 pb-24 bg-white flex items-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full ">
         <div className="flex flex-col lg:grid lg:grid-cols-12 gap-y-12 lg:gap-y-0 gap-x-6 lg:items-stretch">
           {/* Mobile: Top Section - Badge & Intro Paragraphs */}

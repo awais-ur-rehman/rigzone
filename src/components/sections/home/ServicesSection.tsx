@@ -38,7 +38,7 @@ export function ServicesSection() {
   };
 
   return (
-    <section id="services" className="scroll-snap-section min-h-screen py-0 lg:py-20 bg-white flex items-center">
+    <section id="services" className="scroll-snap-section min-h-screen py-8 lg:py-20 bg-white flex lg:items-center">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 w-full space-y-8 md:space-y-12 lg:space-y-20">
         {/* Header */}
         <div className="text-center space-y-10 w-full">
