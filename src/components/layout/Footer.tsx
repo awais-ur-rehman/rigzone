@@ -6,19 +6,19 @@ export function Footer() {
   return (
     <footer className="bg-[#3E4C52]">
       {/* Top CTA band */}
-      <div className="bg-[#E15E00] h-44 md:h-96">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 h-full">
-          <div className="flex items-center justify-between h-full">
+      <div className="bg-[#E15E00] h-44 md:h-72">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-full">
+          <div className="grid grid-cols-3 gap-4 h-full items-center">
             {/* Left: Illustration */}
-            <div className="hidden md:block flex-1 h-full">
+            <div className="hidden md:flex h-full items-center justify-start">
               <img
-                src="/icons/social/footer.svg"
+                src="/icons/social/footer1.svg"
                 alt="Rigzone equipment illustration"
-                className="h-full w-auto object-contain object-left"
+                className="h-full w-auto object-cover"
               />
             </div>
-            {/* Right: CTA Buttons */}
-            <div className="flex gap-4 md:gap-6">
+            {/* Center: CTA Buttons */}
+            <div className="col-span-3 md:col-span-1 flex items-center justify-center gap-4 md:gap-6">
               <Button
                 text="Discover More"
                 icon={<img src="/icons/navigation/arrow.svg" alt="Arrow" className="md:h-4 md:w-4 h-3 w-3" />}
@@ -36,14 +36,22 @@ export function Footer() {
                 href={ROUTES.contact}
               />
             </div>
+            {/* Right: Illustration */}
+            <div className="hidden md:flex h-full items-end justify-end">
+              <img
+                src="/icons/social/footer2.svg"
+                alt="Rigzone equipment illustration"
+                className="h-auto w-auto object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 pt-10">
-        <div className="grid grid-cols-12 gap-x-2 py-6 space-y-8 lg:space-y-4">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10 pt-12">
+        <div className="grid grid-cols-12 gap-x-2 py-6 space-y-8 lg:space-y-5">
           {/* Left branding column */}
-          <div className="col-span-12 lg:col-span-3 space-y-8 items-start justify-center flex flex-col">
+          <div className="col-span-12 lg:col-span-3 space-y-9 items-start justify-center flex flex-col">
             <div className="flex justify-start">
               <a href={ROUTES.home} className="cursor-pointer">
                 <img src="/images/logo/Logo.svg" alt="Rigzone" className="h-20 w-auto object-cover" />
@@ -66,7 +74,7 @@ export function Footer() {
           {/* Top Links */}
           <div className="col-span-12 lg:col-span-2 mt-0 lg:mt-6 space-y-6">
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-white mb-4">Top Links</h4>
-            <ul className="space-y-3 text-white text-[16px] space-y-4 font-inter">
+            <ul className="space-y-4 text-white text-[16px] space-y-4 font-inter">
               <li><a href={ROUTES.about} className="cursor-pointer">About Us</a></li>
               <li><a href={ROUTES.services} className="cursor-pointer">Our Services</a></li>
               <li><a href={ROUTES.products} className="cursor-pointer">Our Products</a></li>
