@@ -1,8 +1,24 @@
+'use client';
+
 import { Button } from "../ui/Button";
 import { ROUTES } from "../../routes";
+import { trackNewsletterSubscribe } from '@/lib/analytics';
+import { useState } from 'react';
 
 
 export function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+
+  const handleNewsletterSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (newsletterEmail) {
+      trackNewsletterSubscribe(newsletterEmail);
+      // You can add your newsletter subscription API call here
+      setNewsletterEmail('');
+      // Optional: Show success message
+    }
+  };
+
   return (
     <footer className="bg-[#3E4C52]">
       {/* Top CTA band */}
@@ -108,12 +124,22 @@ export function Footer() {
             <h4 className="text-[20px] font-motor-oil tracking-[1.2px] text-start lg:text-end text-white mb-3 lg:text-right max-w-xs lg:ml-auto">Subscribe
               <span className="block">to our Newsletter</span>
             </h4>
-            <div className="flex flex-col space-y-6 items-start lg:items-end">
-              <input type="email" placeholder="Your Email Address..." className="w-full border border-[#CAD2D7] px-4 py-3 text-[16px] font-inter text-white focus:outline-none placeholder:text-white" />
-              <button className="inline-flex items-center w-full justify-center bg-[#E15E00] text-white px-6 py-3 text-[16px] font-[var(--font-motor-oil)] tracking-[1.2px] hover:bg-[#c95600] cursor-pointer">
+            <form onSubmit={handleNewsletterSubmit} className="flex flex-col space-y-6 items-start lg:items-end w-full">
+              <input
+                type="email"
+                placeholder="Your Email Address..."
+                className="w-full border border-[#CAD2D7] px-4 py-3 text-[16px] font-inter text-white bg-transparent focus:outline-none placeholder:text-white"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
+              />
+              <button
+                type="submit"
+                className="inline-flex items-center w-full justify-center bg-[#E15E00] text-white px-6 py-3 text-[16px] font-[var(--font-motor-oil)] tracking-[1.2px] hover:bg-[#c95600] cursor-pointer"
+              >
                 Subscribe <img src="/icons/navigation/arrow.svg" alt="arrow" className="ml-2 h-4 w-4" />
               </button>
-            </div>
+            </form>
           </div>
         </div>
 

@@ -5,6 +5,7 @@ import { Card } from '@/components/ui/Card';
 import servicesData from '@/data/services.json';
 import { useRouter } from 'next/navigation';
 import { ROUTES } from '@/routes';
+import { trackServiceView } from '@/lib/analytics';
 
 export function ServicesSection() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
@@ -72,7 +73,11 @@ export function ServicesSection() {
                 description={service.description}
                 ctaText="Read More"
                 ctaIcon={<ArrowIcon isHovered={hoveredIndex === index} index={index} />}
-                onCtaClick={() => router.push(`${ROUTES.services}#service-detail`)}
+                onCtaClick={() => {
+                  // Track service click
+                  trackServiceView(service.id, service.titleFull || service.title, 'click');
+                  router.push(`${ROUTES.services}#service-detail`);
+                }}
               />
             </div>
           ))}

@@ -8,6 +8,7 @@ import { Button } from '../ui/Button';
 import { executeRecaptcha } from '@/lib/recaptcha';
 import { useEffect, useState } from 'react';
 import { RecaptchaBox } from '../ui/RecaptchaBox';
+import { trackFormSubmit } from '@/lib/analytics';
 
 const contactFormSchema = z.object({
   message: z.string().min(10, 'Message must be at least 10 characters'),
@@ -68,6 +69,9 @@ export function ContactForm({ variant = 'default' }: ContactFormProps) {
       if (!response.ok || !result.success) {
         throw new Error(result.error || 'Failed to send message');
       }
+
+      // Track form submission
+      trackFormSubmit('Contact Form');
 
       reset();
       setRecaptchaToken(null);

@@ -1,12 +1,53 @@
 "use client"
 
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect, useRef } from 'react';
 import products from '@/data/products.json';
 import { ProductInfoCard } from '@/components/ui/ProductInfoCard';
+import { trackProductView } from '@/lib/analytics';
 
 export function ProductDetail() {
   const items = useMemo(() => products, []);
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const trackedProducts = useRef<Set<number>>(new Set());
+
+  // Track product views when they come into viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const productId = parseInt(entry.target.getAttribute('data-product-id') || '0');
+            if (productId && !trackedProducts.current.has(productId)) {
+              const product = items.find((p: any) => p.id === productId);
+              if (product) {
+                trackProductView(product.id, product.title, 'view');
+                trackedProducts.current.add(productId);
+              }
+            }
+          }
+        });
+      },
+      { threshold: 0.3 } // Track when 30% of the card is visible
+    );
+
+    // Observe all product cards
+    const cards = document.querySelectorAll('[data-product-id]');
+    cards.forEach((card) => observer.observe(card));
+
+    return () => {
+      cards.forEach((card) => observer.unobserve(card));
+    };
+  }, [items]);
+
+  // Track when a product is expanded
+  useEffect(() => {
+    if (expandedId !== null) {
+      const product = items.find((p: any) => p.id === expandedId);
+      if (product) {
+        trackProductView(product.id, product.title, 'expand');
+      }
+    }
+  }, [expandedId, items]);
 
   return (
     <section id="product-detail" className="min-h-screen pb-10 py-36 bg-white">
@@ -32,6 +73,7 @@ export function ProductDetail() {
                 <div
                   key={p.id}
                   id={anchorId}
+                  data-product-id={p.id}
                   className={`${isExpanded ? 'row-span-2' : 'row-span-1'} ${isBlurred ? 'blur-[0.5px]' : ''} transition-all duration-500 ease-out will-change-transform scroll-mt-32`}
                 >
                   <ProductInfoCard

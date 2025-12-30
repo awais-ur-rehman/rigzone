@@ -4,10 +4,16 @@ import { ProductCard } from '@/components/ui/ProductCard';
 import { Button } from '@/components/ui/Button';
 import productsData from '@/data/products.json';
 import { ROUTES } from '@/routes';
+import { trackProductView } from '@/lib/analytics';
 
 export function ProductSection() {
     const featuredProducts = productsData.slice(0, 10);
     const handleProductClick = (productId: number) => {
+        // Track product click
+        const product = productsData.find((p) => p.id === productId);
+        if (product) {
+            trackProductView(product.id, product.title, 'click');
+        }
         // Navigate to products page
         window.location.href = ROUTES.products;
     };
